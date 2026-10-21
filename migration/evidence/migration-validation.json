@@ -1,0 +1,220 @@
+{
+  "database": "food_distribution_migration_20261020_140639",
+  "baseline": "food_distribution_migration_20261020_140639_baseline",
+  "preservation": [
+    {
+      "table": "res_company",
+      "columns": [
+        "id",
+        "name",
+        "partner_id",
+        "currency_id"
+      ],
+      "baseline_rows": 1,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "aeaeba2746ad3ff8f34c26e58e3f5cbf7e9fed68a105f206427d2d3640655ac8"
+    },
+    {
+      "table": "res_partner",
+      "columns": [
+        "id",
+        "name",
+        "parent_id",
+        "company_id",
+        "active"
+      ],
+      "baseline_rows": 5,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "a9baa3d578b952aa00a5710311befb11eca8f1b2724a4139983cc12790074f52"
+    },
+    {
+      "table": "product_template",
+      "columns": [
+        "id",
+        "name",
+        "type",
+        "list_price",
+        "active",
+        "uom_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "product_product",
+      "columns": [
+        "id",
+        "product_tmpl_id",
+        "active",
+        "default_code"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "sale_order",
+      "columns": [
+        "id",
+        "name",
+        "partner_id",
+        "state",
+        "amount_total",
+        "currency_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "sale_order_line",
+      "columns": [
+        "id",
+        "order_id",
+        "product_id",
+        "product_uom_qty",
+        "price_unit",
+        "qty_delivered",
+        "qty_invoiced"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "purchase_order",
+      "columns": [
+        "id",
+        "name",
+        "partner_id",
+        "state",
+        "amount_total",
+        "currency_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "purchase_order_line",
+      "columns": [
+        "id",
+        "order_id",
+        "product_id",
+        "product_qty",
+        "price_unit",
+        "qty_received"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "stock_quant",
+      "columns": [
+        "id",
+        "product_id",
+        "location_id",
+        "lot_id",
+        "quantity",
+        "reserved_quantity",
+        "company_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "stock_move",
+      "columns": [
+        "id",
+        "product_id",
+        "state",
+        "product_uom_qty",
+        "location_id",
+        "location_dest_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "stock_lot",
+      "columns": [
+        "id",
+        "name",
+        "product_id",
+        "company_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "mrp_production",
+      "columns": [
+        "id",
+        "name",
+        "product_id",
+        "product_qty",
+        "state",
+        "bom_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "account_move",
+      "columns": [
+        "id",
+        "name",
+        "partner_id",
+        "state",
+        "amount_total",
+        "currency_id"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "account_move_line",
+      "columns": [
+        "id",
+        "move_id",
+        "account_id",
+        "debit",
+        "credit",
+        "balance"
+      ],
+      "baseline_rows": 0,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "uom_uom",
+      "columns": [
+        "id",
+        "name",
+        "relative_factor",
+        "relative_uom_id"
+      ],
+      "baseline_rows": 30,
+      "changed_or_missing_ids": [],
+      "baseline_sha256": "77a2a56f2f1fe635a4ce68013cbd8cb176fc3e702209eca566649b62cf889393"
+    }
+  ],
+  "errors": [],
+  "preview": {
+    "product_template_id": 14,
+    "product_id": 14,
+    "lot_id": 1
+  },
+  "food_label_pdf": {
+    "bytes": 23764,
+    "valid_pdf_header": true,
+    "html_contains_food_data": true
+  }
+}

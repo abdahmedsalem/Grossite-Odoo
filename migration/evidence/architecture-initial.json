@@ -1,0 +1,1358 @@
+{
+  "database": "food_distribution",
+  "modules": {
+    "base_industry_data": {
+      "path": "/mnt/extra-addons/base_industry_data",
+      "version": "19.0.2.0.0",
+      "state": "installed",
+      "python_files": 2,
+      "xml_files": 4,
+      "dependencies": [
+        {
+          "name": "base",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/base",
+          "state": "installed"
+        },
+        {
+          "name": "web_tour",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/web_tour",
+          "state": "installed"
+        }
+      ],
+      "data_defining_manual_models": [],
+      "files_sha256": {
+        "__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "__manifest__.py": "2c3fe0645f87b739ec24dc84e301ee2a603462d4240ee18ae563bdf82028b9f2",
+        "data/res_partner_category.xml": "3494e6aff8d02bb2f04111ae88760b2e0e3ccd0768195e93cad24501b829c4bc",
+        "demo/res_users.xml": "f70b84c03f5020ebb97c93971d06c2eecb5c35595d55864946ea96ab8294c49f",
+        "demo/res_partner.xml": "31b4e76ced538d97bd4b23dced2d6da34e117c434c177f4bce2a29a231a3ef95",
+        "demo/res_partner_category.xml": "465e3aabf585fcd4723fe19a2d33865acbb758e7a7644bc7968fdc31d0b11b63"
+      },
+      "model_classes": []
+    },
+    "food_distribution": {
+      "path": "/mnt/extra-addons/food_distribution",
+      "version": "19.0.2.0.0",
+      "state": "installed",
+      "python_files": 10,
+      "xml_files": 19,
+      "dependencies": [
+        {
+          "name": "base_industry_data",
+          "path": "/mnt/extra-addons/base_industry_data",
+          "state": "installed"
+        },
+        {
+          "name": "sale_management",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_management",
+          "state": "installed"
+        },
+        {
+          "name": "purchase_mrp",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/purchase_mrp",
+          "state": "installed"
+        },
+        {
+          "name": "sale_mrp",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_mrp",
+          "state": "installed"
+        },
+        {
+          "name": "sale_purchase_stock",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_purchase_stock",
+          "state": "installed"
+        },
+        {
+          "name": "sale_purchase_project",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_purchase_project",
+          "state": "installed"
+        },
+        {
+          "name": "product_expiry",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/product_expiry",
+          "state": "installed"
+        },
+        {
+          "name": "mail",
+          "path": "/usr/lib/python3/dist-packages/odoo/addons/mail",
+          "state": "installed"
+        }
+      ],
+      "data_defining_manual_models": [],
+      "files_sha256": {
+        "hooks.py": "f88d063cbe85536fa3bcd69aa66e9f2ae70773e86653af1609fc4df2e788ee28",
+        "__init__.py": "1d3d0b5a240efab5549c1eaf79fd9e9104dbf40e0557d482dc75c3f03c88a3dc",
+        "__manifest__.py": "b24526153c6f60fc3d931c9cb05aa5a8c0db44f5533c4f5dd89b2b32555978e1",
+        "models/lot_label_report.py": "146df38d7b09fbfd3d977ccb9f68a16a98893ce7323ba33513b2ece646fd8da5",
+        "models/nutritional_facts.py": "ebbe7e1d1e631c9cb03aa7630044d608151dffc60f05a6cd27303b8d049e078f",
+        "models/product_template.py": "7dd0b543cac3fc6d317c9f9fc48def9b6d4823d5ee5edde8af0fa2438f532889",
+        "models/res_config_settings.py": "2472c127d4b2e3b07e73c37a776976b9a9dff549e73bec3db9eeeb8f31c63406",
+        "models/__init__.py": "506efeb93cec867689ffa6d9ee1cbbd24f4d918b8ebe6f18d5b39e446298fdc4",
+        "tests/test_food_distribution.py": "63b6addac9a0b20c885e23b6802597b9de04a271fb0b60cf5408bd7499b9111c",
+        "tests/__init__.py": "450b4773048f3f55aaac82b4c86477ad2c194eb3c1a57061eb7e447c64a61853",
+        "security/ir.model.access.csv": "2c1bb0466b0f6c6d8d1461814670525e5f1a63a7754422fb97b1845768500ef5",
+        "data/ir_default.xml": "7f660e5d0102e580394d037a5c3296a20006fc94bf3da7067c03987fe1dbbf9b",
+        "views/nutritional_facts_views.xml": "cbd749eff871e763d6f069b3bf96a38fea45a88a544e4b3d91338c6fa7790ffc",
+        "views/nutritional_facts_actions.xml": "36bae020ed36949d97a6a0728369a939282706965ce3f3dca18edd982d793e99",
+        "views/nutritional_facts_menus.xml": "86831ad1eb22a480a7d079cf81974ecccf9240704ca43e34dad22854d0c2a8e2",
+        "report/lot_label_templates.xml": "e0a4c27a13c7c8704f76cbd6c064b023b924df10927fa2d9046c2aab9092cb40",
+        "report/paperformat.xml": "a078eeb05c68f8e0fbb4ce67f63ca9577499d80f4f71932340270092b27bdde3",
+        "views/res_config_settings_views.xml": "579ca89e672e754884b8f0bfd33ad7e5dfc31d5049a8a1ac4271111ec9ca936b",
+        "data/uom_uom.xml": "71bca010161b9121999d686520d3a750738c5575b755d02800e21ee883eb6cfe",
+        "data/x_nutritional_facts.xml": "fa1f21b7fc4cc27fb9b57acef5f154f93083d65a20463d92bb9afbec78f2e9de",
+        "demo/product_category.xml": "d87eb286c8b07f660bcf4f91df5ab050528d61ab0e6038e5059b5806558410c6",
+        "demo/product_template.xml": "91a14d586f4f4f4a3bea4ad8ab4900c20d0b7a349c58a28d615697201cdeff99",
+        "demo/product_product.xml": "63a3439f908f5e3df0206b48b7ce8a7347474581756867baa98b206516039dd1",
+        "demo/mrp_workcenter.xml": "ae5668e8af791d2906d68a3188f09620bbc5092513f7b4eaac3af5b9f4f25748",
+        "demo/mrp_bom.xml": "54d708be2cc0cfe9139e3be038ae07fac60e3bf5a625f8ca5010e719207775ba",
+        "demo/mrp_bom_line.xml": "d3257c42bf363448ceb7b52bcd4cae3a86626f8ea69288349f1cf9060e3e8990",
+        "demo/mrp_routing_workcenter.xml": "ba58032539f6ea5d3cb5e6627fdf58d74f9263e7ceaf8a11f60316937e62b427",
+        "demo/product_supplierinfo.xml": "f46a02686d599b856fc5c077d4899856ad1637502974468d30561fa0db3b6079",
+        "demo/sale_order_template.xml": "e2bf1d890281ff34bd6cd3ec6aa17657723000fd991b47fdf52c276739c858a1",
+        "demo/sale_order_template_line.xml": "231c7f7a391dbba18f6d33430c5ae6f2e5a3ee2a0b4ba14950bb33115b18f763"
+      },
+      "model_classes": [
+        {
+          "file": "models/lot_label_report.py",
+          "class": "FoodLotLabelReport",
+          "_name": "report.food_distribution.report_food_lot_label"
+        },
+        {
+          "file": "models/lot_label_report.py",
+          "class": "FoodBomLabelReport",
+          "_name": "report.food_distribution.report_bom_food_label"
+        },
+        {
+          "file": "models/nutritional_facts.py",
+          "class": "NutritionalFacts",
+          "_name": "x_nutritional_facts",
+          "_inherit": [
+            "mail.thread",
+            "mail.activity.mixin"
+          ]
+        },
+        {
+          "file": "models/nutritional_facts.py",
+          "class": "ProductIngredients",
+          "_name": "x_product_template_ingredients"
+        },
+        {
+          "file": "models/nutritional_facts.py",
+          "class": "ProductNutritionalFacts",
+          "_name": "x_product_template_nutritional_fact"
+        },
+        {
+          "file": "models/product_template.py",
+          "class": "ProductTemplate",
+          "_inherit": "product.template"
+        },
+        {
+          "file": "models/res_config_settings.py",
+          "class": "ResCompany",
+          "_inherit": "res.company"
+        },
+        {
+          "file": "models/res_config_settings.py",
+          "class": "ResConfigSettings",
+          "_inherit": "res.config.settings"
+        },
+        {
+          "file": "models/res_config_settings.py",
+          "class": "IrUiMenu",
+          "_inherit": "ir.ui.menu"
+        }
+      ]
+    },
+    "food_distribution_quality": {
+      "path": "/mnt/extra-addons/food_distribution_quality",
+      "version": "19.0.1.0.0",
+      "state": "installed",
+      "python_files": 6,
+      "xml_files": 3,
+      "dependencies": [
+        {
+          "name": "food_distribution",
+          "path": "/mnt/extra-addons/food_distribution",
+          "state": "installed"
+        },
+        {
+          "name": "quality_control_oca",
+          "path": "/mnt/vendor-addons/quality_control_oca",
+          "state": "installed"
+        }
+      ],
+      "data_defining_manual_models": [],
+      "files_sha256": {
+        "__init__.py": "5fd10918e1361ad65b4b41bcd8fb525e659267f47c8c4334ae52530e58908e9e",
+        "__manifest__.py": "aeca2a4c84276bf2e42eb186072a1c14220bf68ac528c342ea795ac2fe245a3b",
+        "models/quality.py": "48c0a7e23c5a321b1c9fc52e5cad341d2c3ed10e376b35ec5ad7f025329efac1",
+        "models/__init__.py": "17e1627caec78c6f7e906215573583b2c9f18775cb5ee6dbbd4184be3ee5a448",
+        "tests/test_quality.py": "92f5a6d790698259c68620a35c1a08f2c66e911cb71ab8e6678894bc42d99149",
+        "tests/__init__.py": "1d2ea0f219ad28e4d34f18b743a6d774cd5dc64b618b5d498a7e18f9657de88d",
+        "security/security.xml": "5fa39bbc2390ad0b0c1cdec8838d39872c163917ff7e0c66a486551591a8e701",
+        "security/ir.model.access.csv": "5213b30c814c86557f6e4d0805864beff6dae82ca60e6c8d630338e5db879b06",
+        "views/quality_views.xml": "26414e642664da2337cea6a7fc8eb5d48d1409fd98651ad52f5ae5273ca7c675",
+        "demo/food_quality_points.xml": "68fb77dc17884ff708d2a83539f5822d536e7b93661fcf7bbe0463256d398650"
+      },
+      "model_classes": [
+        {
+          "file": "models/quality.py",
+          "class": "FoodQualityPoint",
+          "_name": "food.quality.point"
+        },
+        {
+          "file": "models/quality.py",
+          "class": "QcInspection",
+          "_inherit": "qc.inspection"
+        },
+        {
+          "file": "models/quality.py",
+          "class": "MrpProduction",
+          "_inherit": "mrp.production"
+        },
+        {
+          "file": "models/quality.py",
+          "class": "MrpWorkorder",
+          "_inherit": "mrp.workorder"
+        }
+      ]
+    },
+    "food_distribution_planning": {
+      "path": "/mnt/extra-addons/food_distribution_planning",
+      "version": "19.0.1.0.0",
+      "state": "installed",
+      "python_files": 6,
+      "xml_files": 3,
+      "dependencies": [
+        {
+          "name": "food_distribution",
+          "path": "/mnt/extra-addons/food_distribution",
+          "state": "installed"
+        }
+      ],
+      "data_defining_manual_models": [],
+      "files_sha256": {
+        "__init__.py": "5fd10918e1361ad65b4b41bcd8fb525e659267f47c8c4334ae52530e58908e9e",
+        "__manifest__.py": "6aaf625992b4bd50beaa41ca000545db3e7e811126951c96a5537d24ae774c5f",
+        "models/forecast.py": "d30c99a76487bd82b79d67526e0330301b4bf1296a2e1896d7c5cbc8bce58dd4",
+        "models/__init__.py": "73953380a5a4d17033ed1c1e9f33178501cb593bbd8e7c4124361ceb690f8b34",
+        "tests/test_forecast.py": "c58c86a9d6da61653a8ec404015955e0b0b369580fdbb7f05b7795477247bd4c",
+        "tests/__init__.py": "1366c667caac1f089460b72e3563b5ad7079e7a20279bacae4d4918f053f1cd3",
+        "security/security.xml": "bffed6b4e7f0be1de4923947a764b80e01469d0b4902e79bbfea3ca08852c624",
+        "security/ir.model.access.csv": "330cac597383ef90aec180185aa6edc95d6457a7d6f765242af7c99a387797df",
+        "views/forecast_views.xml": "afc4b21d6f0c046368b282f09ae0a1f3be982f6505c123e8a19f097f6ffe3dc9",
+        "demo/forecasts.xml": "76e7d9840de806d247ed5b7854e2c79345641674e3ce6ffbecbf44671a2e8243"
+      },
+      "model_classes": [
+        {
+          "file": "models/forecast.py",
+          "class": "FoodProductionForecast",
+          "_name": "food.production.forecast",
+          "_inherit": [
+            "mail.thread",
+            "mail.activity.mixin"
+          ]
+        }
+      ]
+    }
+  },
+  "checks": [
+    {
+      "name": "base_industry_data:loaded_from_custom_addons",
+      "passed": true,
+      "evidence": "/mnt/extra-addons/base_industry_data"
+    },
+    {
+      "name": "base_industry_data:installed",
+      "passed": true,
+      "evidence": "installed"
+    },
+    {
+      "name": "base_industry_data:manifest_version",
+      "passed": true,
+      "evidence": "19.0.2.0.0"
+    },
+    {
+      "name": "base_industry_data:manifest_files_exist",
+      "passed": true,
+      "evidence": [
+        "data/res_partner_category.xml",
+        "demo/res_users.xml",
+        "demo/res_partner.xml",
+        "demo/res_partner_category.xml"
+      ]
+    },
+    {
+      "name": "base_industry_data:no_xml_manual_schema",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "base_industry_data:dependency:base",
+      "passed": true,
+      "evidence": {
+        "name": "base",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/base",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "base_industry_data:dependency:web_tour",
+      "passed": true,
+      "evidence": {
+        "name": "web_tour",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/web_tour",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:loaded_from_custom_addons",
+      "passed": true,
+      "evidence": "/mnt/extra-addons/food_distribution"
+    },
+    {
+      "name": "food_distribution:installed",
+      "passed": true,
+      "evidence": "installed"
+    },
+    {
+      "name": "food_distribution:manifest_version",
+      "passed": true,
+      "evidence": "19.0.2.0.0"
+    },
+    {
+      "name": "food_distribution:model_in_models:FoodLotLabelReport",
+      "passed": true,
+      "evidence": "models/lot_label_report.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:FoodBomLabelReport",
+      "passed": true,
+      "evidence": "models/lot_label_report.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:NutritionalFacts",
+      "passed": true,
+      "evidence": "models/nutritional_facts.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:ProductIngredients",
+      "passed": true,
+      "evidence": "models/nutritional_facts.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:ProductNutritionalFacts",
+      "passed": true,
+      "evidence": "models/nutritional_facts.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:ProductTemplate",
+      "passed": true,
+      "evidence": "models/product_template.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:ResCompany",
+      "passed": true,
+      "evidence": "models/res_config_settings.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:ResConfigSettings",
+      "passed": true,
+      "evidence": "models/res_config_settings.py"
+    },
+    {
+      "name": "food_distribution:model_in_models:IrUiMenu",
+      "passed": true,
+      "evidence": "models/res_config_settings.py"
+    },
+    {
+      "name": "food_distribution:models_imported",
+      "passed": true,
+      "evidence": [
+        "models",
+        "post_init_hook",
+        "pre_init_hook"
+      ]
+    },
+    {
+      "name": "food_distribution:model_files_imported",
+      "passed": true,
+      "evidence": {
+        "files": [
+          "lot_label_report",
+          "nutritional_facts",
+          "product_template",
+          "res_config_settings"
+        ],
+        "imports": [
+          "lot_label_report",
+          "nutritional_facts",
+          "product_template",
+          "res_config_settings"
+        ]
+      }
+    },
+    {
+      "name": "food_distribution:manifest_files_exist",
+      "passed": true,
+      "evidence": [
+        "security/ir.model.access.csv",
+        "data/ir_default.xml",
+        "views/nutritional_facts_views.xml",
+        "views/nutritional_facts_actions.xml",
+        "views/nutritional_facts_menus.xml",
+        "report/lot_label_templates.xml",
+        "report/paperformat.xml",
+        "views/res_config_settings_views.xml",
+        "data/uom_uom.xml",
+        "data/x_nutritional_facts.xml",
+        "demo/product_category.xml",
+        "demo/product_template.xml",
+        "demo/product_product.xml",
+        "demo/mrp_workcenter.xml",
+        "demo/mrp_bom.xml",
+        "demo/mrp_bom_line.xml",
+        "demo/mrp_routing_workcenter.xml",
+        "demo/product_supplierinfo.xml",
+        "demo/sale_order_template.xml",
+        "demo/sale_order_template_line.xml"
+      ]
+    },
+    {
+      "name": "food_distribution:acl_in_security",
+      "passed": true,
+      "evidence": "security/ir.model.access.csv"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_nutritional_facts_group_system:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution.model_x_nutritional_facts"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_nutritional_facts_group_system:group_id:id",
+      "passed": true,
+      "evidence": "base.group_system"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_nutritional_facts_group_user:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution.model_x_nutritional_facts"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_nutritional_facts_group_user:group_id:id",
+      "passed": true,
+      "evidence": "base.group_user"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_ingredients_group_system:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution.model_x_product_template_ingredients"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_ingredients_group_system:group_id:id",
+      "passed": true,
+      "evidence": "base.group_system"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_ingredients_group_user:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution.model_x_product_template_ingredients"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_ingredients_group_user:group_id:id",
+      "passed": true,
+      "evidence": "base.group_user"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_nutritional_fact_group_system:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution.model_x_product_template_nutritional_fact"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_nutritional_fact_group_system:group_id:id",
+      "passed": true,
+      "evidence": "base.group_system"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_nutritional_fact_group_user:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution.model_x_product_template_nutritional_fact"
+    },
+    {
+      "name": "food_distribution:acl_reference:access_model_x_product_template_nutritional_fact_group_user:group_id:id",
+      "passed": true,
+      "evidence": "base.group_user"
+    },
+    {
+      "name": "food_distribution:no_xml_manual_schema",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "food_distribution:dependency:base_industry_data",
+      "passed": true,
+      "evidence": {
+        "name": "base_industry_data",
+        "path": "/mnt/extra-addons/base_industry_data",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:dependency:sale_management",
+      "passed": true,
+      "evidence": {
+        "name": "sale_management",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_management",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:dependency:purchase_mrp",
+      "passed": true,
+      "evidence": {
+        "name": "purchase_mrp",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/purchase_mrp",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:dependency:sale_mrp",
+      "passed": true,
+      "evidence": {
+        "name": "sale_mrp",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_mrp",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:dependency:sale_purchase_stock",
+      "passed": true,
+      "evidence": {
+        "name": "sale_purchase_stock",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_purchase_stock",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:dependency:sale_purchase_project",
+      "passed": true,
+      "evidence": {
+        "name": "sale_purchase_project",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/sale_purchase_project",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:dependency:product_expiry",
+      "passed": true,
+      "evidence": {
+        "name": "product_expiry",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/product_expiry",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution:dependency:mail",
+      "passed": true,
+      "evidence": {
+        "name": "mail",
+        "path": "/usr/lib/python3/dist-packages/odoo/addons/mail",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution_quality:loaded_from_custom_addons",
+      "passed": true,
+      "evidence": "/mnt/extra-addons/food_distribution_quality"
+    },
+    {
+      "name": "food_distribution_quality:installed",
+      "passed": true,
+      "evidence": "installed"
+    },
+    {
+      "name": "food_distribution_quality:manifest_version",
+      "passed": true,
+      "evidence": "19.0.1.0.0"
+    },
+    {
+      "name": "food_distribution_quality:model_in_models:FoodQualityPoint",
+      "passed": true,
+      "evidence": "models/quality.py"
+    },
+    {
+      "name": "food_distribution_quality:model_in_models:QcInspection",
+      "passed": true,
+      "evidence": "models/quality.py"
+    },
+    {
+      "name": "food_distribution_quality:model_in_models:MrpProduction",
+      "passed": true,
+      "evidence": "models/quality.py"
+    },
+    {
+      "name": "food_distribution_quality:model_in_models:MrpWorkorder",
+      "passed": true,
+      "evidence": "models/quality.py"
+    },
+    {
+      "name": "food_distribution_quality:models_imported",
+      "passed": true,
+      "evidence": [
+        "models"
+      ]
+    },
+    {
+      "name": "food_distribution_quality:model_files_imported",
+      "passed": true,
+      "evidence": {
+        "files": [
+          "quality"
+        ],
+        "imports": [
+          "quality"
+        ]
+      }
+    },
+    {
+      "name": "food_distribution_quality:manifest_files_exist",
+      "passed": true,
+      "evidence": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "views/quality_views.xml",
+        "demo/food_quality_points.xml"
+      ]
+    },
+    {
+      "name": "food_distribution_quality:acl_in_security",
+      "passed": true,
+      "evidence": "security/ir.model.access.csv"
+    },
+    {
+      "name": "food_distribution_quality:acl_reference:food_quality_point_user:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution_quality.model_food_quality_point"
+    },
+    {
+      "name": "food_distribution_quality:acl_reference:food_quality_point_user:group_id:id",
+      "passed": true,
+      "evidence": "quality_control_oca.group_quality_control_user"
+    },
+    {
+      "name": "food_distribution_quality:acl_reference:food_quality_point_manager:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution_quality.model_food_quality_point"
+    },
+    {
+      "name": "food_distribution_quality:acl_reference:food_quality_point_manager:group_id:id",
+      "passed": true,
+      "evidence": "quality_control_oca.group_quality_control_manager"
+    },
+    {
+      "name": "food_distribution_quality:no_xml_manual_schema",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "food_distribution_quality:dependency:food_distribution",
+      "passed": true,
+      "evidence": {
+        "name": "food_distribution",
+        "path": "/mnt/extra-addons/food_distribution",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution_quality:dependency:quality_control_oca",
+      "passed": true,
+      "evidence": {
+        "name": "quality_control_oca",
+        "path": "/mnt/vendor-addons/quality_control_oca",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "food_distribution_planning:loaded_from_custom_addons",
+      "passed": true,
+      "evidence": "/mnt/extra-addons/food_distribution_planning"
+    },
+    {
+      "name": "food_distribution_planning:installed",
+      "passed": true,
+      "evidence": "installed"
+    },
+    {
+      "name": "food_distribution_planning:manifest_version",
+      "passed": true,
+      "evidence": "19.0.1.0.0"
+    },
+    {
+      "name": "food_distribution_planning:model_in_models:FoodProductionForecast",
+      "passed": true,
+      "evidence": "models/forecast.py"
+    },
+    {
+      "name": "food_distribution_planning:models_imported",
+      "passed": true,
+      "evidence": [
+        "models"
+      ]
+    },
+    {
+      "name": "food_distribution_planning:model_files_imported",
+      "passed": true,
+      "evidence": {
+        "files": [
+          "forecast"
+        ],
+        "imports": [
+          "forecast"
+        ]
+      }
+    },
+    {
+      "name": "food_distribution_planning:manifest_files_exist",
+      "passed": true,
+      "evidence": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "views/forecast_views.xml",
+        "demo/forecasts.xml"
+      ]
+    },
+    {
+      "name": "food_distribution_planning:acl_in_security",
+      "passed": true,
+      "evidence": "security/ir.model.access.csv"
+    },
+    {
+      "name": "food_distribution_planning:acl_reference:food_forecast_user:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution_planning.model_food_production_forecast"
+    },
+    {
+      "name": "food_distribution_planning:acl_reference:food_forecast_user:group_id:id",
+      "passed": true,
+      "evidence": "mrp.group_mrp_user"
+    },
+    {
+      "name": "food_distribution_planning:acl_reference:food_forecast_manager:model_id:id",
+      "passed": true,
+      "evidence": "food_distribution_planning.model_food_production_forecast"
+    },
+    {
+      "name": "food_distribution_planning:acl_reference:food_forecast_manager:group_id:id",
+      "passed": true,
+      "evidence": "mrp.group_mrp_manager"
+    },
+    {
+      "name": "food_distribution_planning:no_xml_manual_schema",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "food_distribution_planning:dependency:food_distribution",
+      "passed": true,
+      "evidence": {
+        "name": "food_distribution",
+        "path": "/mnt/extra-addons/food_distribution",
+        "state": "installed"
+      }
+    },
+    {
+      "name": "runtime:x_nutritional_facts:python_model",
+      "passed": true,
+      "evidence": {
+        "name": "x_nutritional_facts",
+        "state": "base",
+        "custom_factory_model": false,
+        "table": "x_nutritional_facts",
+        "python_classes": [
+          {
+            "module": "odoo.addons.food_distribution.models.nutritional_facts",
+            "file": "/mnt/extra-addons/food_distribution/models/nutritional_facts.py"
+          }
+        ]
+      }
+    },
+    {
+      "name": "runtime:x_product_template_ingredients:python_model",
+      "passed": true,
+      "evidence": {
+        "name": "x_product_template_ingredients",
+        "state": "base",
+        "custom_factory_model": false,
+        "table": "x_product_template_ingredients",
+        "python_classes": [
+          {
+            "module": "odoo.addons.food_distribution.models.nutritional_facts",
+            "file": "/mnt/extra-addons/food_distribution/models/nutritional_facts.py"
+          }
+        ]
+      }
+    },
+    {
+      "name": "runtime:x_product_template_nutritional_fact:python_model",
+      "passed": true,
+      "evidence": {
+        "name": "x_product_template_nutritional_fact",
+        "state": "base",
+        "custom_factory_model": false,
+        "table": "x_product_template_nutritional_fact",
+        "python_classes": [
+          {
+            "module": "odoo.addons.food_distribution.models.nutritional_facts",
+            "file": "/mnt/extra-addons/food_distribution/models/nutritional_facts.py"
+          }
+        ]
+      }
+    },
+    {
+      "name": "runtime:food.quality.point:python_model",
+      "passed": true,
+      "evidence": {
+        "name": "food.quality.point",
+        "state": "base",
+        "custom_factory_model": false,
+        "table": "food_quality_point",
+        "python_classes": [
+          {
+            "module": "odoo.addons.food_distribution_quality.models.quality",
+            "file": "/mnt/extra-addons/food_distribution_quality/models/quality.py"
+          }
+        ]
+      }
+    },
+    {
+      "name": "runtime:food.production.forecast:python_model",
+      "passed": true,
+      "evidence": {
+        "name": "food.production.forecast",
+        "state": "base",
+        "custom_factory_model": false,
+        "table": "food_production_forecast",
+        "python_classes": [
+          {
+            "module": "odoo.addons.food_distribution_planning.models.forecast",
+            "file": "/mnt/extra-addons/food_distribution_planning/models/forecast.py"
+          }
+        ]
+      }
+    },
+    {
+      "name": "runtime:product.template.x_label_note:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_product_template_label_note:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10244,
+        "alias_field_id": 10244
+      }
+    },
+    {
+      "name": "runtime:product.template.x_is_allergen:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_product_template_is_allergen:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10245,
+        "alias_field_id": 10245
+      }
+    },
+    {
+      "name": "runtime:x_nutritional_facts.x_name:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_nutritional_facts_name:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10212,
+        "alias_field_id": 10212
+      }
+    },
+    {
+      "name": "runtime:x_nutritional_facts.x_active:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_nutritional_facts_active:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10213,
+        "alias_field_id": 10213
+      }
+    },
+    {
+      "name": "runtime:x_nutritional_facts.x_sequence:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_nutritional_facts_sequence:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10214,
+        "alias_field_id": 10214
+      }
+    },
+    {
+      "name": "runtime:x_nutritional_facts.x_parent:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_nutritional_facts_parent:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10215,
+        "alias_field_id": 10215
+      }
+    },
+    {
+      "name": "runtime:x_nutritional_facts.x_unit_id:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_nutritional_facts_unit:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10216,
+        "alias_field_id": 10216
+      }
+    },
+    {
+      "name": "runtime:x_product_template_nutritional_fact.x_product_template_id:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_nutritional_fact_product_template_id:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10234,
+        "alias_field_id": 10234
+      }
+    },
+    {
+      "name": "runtime:x_product_template_nutritional_fact.x_nutritional_fact_id:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_nutritional_fact_nutritional_fact_id:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10235,
+        "alias_field_id": 10235
+      }
+    },
+    {
+      "name": "runtime:x_product_template_nutritional_fact.x_per_100g:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_nutritional_fact_per_100g:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10236,
+        "alias_field_id": 10236
+      }
+    },
+    {
+      "name": "runtime:x_product_template_nutritional_fact.x_unit_id:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_nutritional_fact_unit:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10237,
+        "alias_field_id": 10237
+      }
+    },
+    {
+      "name": "runtime:x_product_template_nutritional_fact.x_sequence:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_nutritional_fact_sequence:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10238,
+        "alias_field_id": 10238
+      }
+    },
+    {
+      "name": "runtime:x_product_template_ingredients.x_product_template_id:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_ingredients_product_template_id:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10223,
+        "alias_field_id": 10223
+      }
+    },
+    {
+      "name": "runtime:x_product_template_ingredients.x_ingredient_id:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_ingredients_ingredient_id:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10224,
+        "alias_field_id": 10224
+      }
+    },
+    {
+      "name": "runtime:x_product_template_ingredients.x_is_allergen:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_ingredients_is_allergen:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10225,
+        "alias_field_id": 10225
+      }
+    },
+    {
+      "name": "runtime:x_product_template_ingredients.x_sequence:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_ingredients_sequence:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10226,
+        "alias_field_id": 10226
+      }
+    },
+    {
+      "name": "runtime:x_product_template_ingredients.x_share:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_x_product_template_ingredients_share:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10227,
+        "alias_field_id": 10227
+      }
+    },
+    {
+      "name": "runtime:product.template.x_nutritional_fact_ids:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_product_template_nutritional_facts:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10247,
+        "alias_field_id": 10247
+      }
+    },
+    {
+      "name": "runtime:product.template.x_ingredient_ids:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_product_template_ingredients:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10246,
+        "alias_field_id": 10246
+      }
+    },
+    {
+      "name": "runtime:res.company.x_module_food_drinks_labels:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_res_company_x_module_food_drinks_labels:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10249,
+        "alias_field_id": 10249
+      }
+    },
+    {
+      "name": "runtime:res.config.settings.x_module_food_drinks_labels:base_field",
+      "passed": true,
+      "evidence": {
+        "state": "base",
+        "modules": "food_distribution"
+      }
+    },
+    {
+      "name": "runtime:field_res_config_setting_x_module_food_drinks_labels:legacy_xmlid",
+      "passed": true,
+      "evidence": {
+        "field_id": 10250,
+        "alias_field_id": 10250
+      }
+    },
+    {
+      "name": "view:1688",
+      "passed": true,
+      "evidence": {
+        "name": "Nutritional Facts Form View",
+        "model": "x_nutritional_facts"
+      }
+    },
+    {
+      "name": "view:1687",
+      "passed": true,
+      "evidence": {
+        "name": "Nutritional Facts List View",
+        "model": "x_nutritional_facts"
+      }
+    },
+    {
+      "name": "view:1689",
+      "passed": true,
+      "evidence": {
+        "name": "Nutritional Facts Search View",
+        "model": "x_nutritional_facts"
+      }
+    },
+    {
+      "name": "view:1690",
+      "passed": true,
+      "evidence": {
+        "name": "food.distribution.inherit.product.template.only.form.view",
+        "model": "product.template"
+      }
+    },
+    {
+      "name": "view:1695",
+      "passed": true,
+      "evidence": {
+        "name": "food.production.forecast.form",
+        "model": "food.production.forecast"
+      }
+    },
+    {
+      "name": "view:1694",
+      "passed": true,
+      "evidence": {
+        "name": "food.production.forecast.list",
+        "model": "food.production.forecast"
+      }
+    },
+    {
+      "name": "view:1696",
+      "passed": true,
+      "evidence": {
+        "name": "food.production.forecast.pivot",
+        "model": "food.production.forecast"
+      }
+    },
+    {
+      "name": "view:1698",
+      "passed": true,
+      "evidence": {
+        "name": "food.quality.point.form",
+        "model": "food.quality.point"
+      }
+    },
+    {
+      "name": "view:1697",
+      "passed": true,
+      "evidence": {
+        "name": "food.quality.point.list",
+        "model": "food.quality.point"
+      }
+    },
+    {
+      "name": "view:1699",
+      "passed": true,
+      "evidence": {
+        "name": "mrp.production.food.quality",
+        "model": "mrp.production"
+      }
+    },
+    {
+      "name": "view:1700",
+      "passed": true,
+      "evidence": {
+        "name": "qc.inspection.food.link",
+        "model": "qc.inspection"
+      }
+    },
+    {
+      "name": "view:1692",
+      "passed": true,
+      "evidence": {
+        "name": "report_bom_food_label",
+        "model": false
+      }
+    },
+    {
+      "name": "view:1691",
+      "passed": true,
+      "evidence": {
+        "name": "report_food_lot_label",
+        "model": false
+      }
+    },
+    {
+      "name": "view:1693",
+      "passed": true,
+      "evidence": {
+        "name": "res.config.settings.form.view.inherited.food.distribution",
+        "model": "res.config.settings"
+      }
+    }
+  ],
+  "legacy_field_comparison": [],
+  "runtime_models": [
+    {
+      "name": "x_nutritional_facts",
+      "state": "base",
+      "custom_factory_model": false,
+      "table": "x_nutritional_facts",
+      "python_classes": [
+        {
+          "module": "odoo.addons.food_distribution.models.nutritional_facts",
+          "file": "/mnt/extra-addons/food_distribution/models/nutritional_facts.py"
+        }
+      ]
+    },
+    {
+      "name": "x_product_template_ingredients",
+      "state": "base",
+      "custom_factory_model": false,
+      "table": "x_product_template_ingredients",
+      "python_classes": [
+        {
+          "module": "odoo.addons.food_distribution.models.nutritional_facts",
+          "file": "/mnt/extra-addons/food_distribution/models/nutritional_facts.py"
+        }
+      ]
+    },
+    {
+      "name": "x_product_template_nutritional_fact",
+      "state": "base",
+      "custom_factory_model": false,
+      "table": "x_product_template_nutritional_fact",
+      "python_classes": [
+        {
+          "module": "odoo.addons.food_distribution.models.nutritional_facts",
+          "file": "/mnt/extra-addons/food_distribution/models/nutritional_facts.py"
+        }
+      ]
+    },
+    {
+      "name": "food.quality.point",
+      "state": "base",
+      "custom_factory_model": false,
+      "table": "food_quality_point",
+      "python_classes": [
+        {
+          "module": "odoo.addons.food_distribution_quality.models.quality",
+          "file": "/mnt/extra-addons/food_distribution_quality/models/quality.py"
+        }
+      ]
+    },
+    {
+      "name": "food.production.forecast",
+      "state": "base",
+      "custom_factory_model": false,
+      "table": "food_production_forecast",
+      "python_classes": [
+        {
+          "module": "odoo.addons.food_distribution_planning.models.forecast",
+          "file": "/mnt/extra-addons/food_distribution_planning/models/forecast.py"
+        }
+      ]
+    }
+  ],
+  "architecture_passed": true,
+  "legacy_field_semantics_passed": null,
+  "checks_count": 137
+}

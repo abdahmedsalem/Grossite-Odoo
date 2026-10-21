@@ -1,0 +1,111 @@
+{
+  "database": "food_distribution",
+  "results": [
+    {
+      "table": "account_move",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "account_move_line",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "mrp_production",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "product_product",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "product_template",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "purchase_order",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "purchase_order_line",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "res_company",
+      "original_rows": 1,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "aeaeba2746ad3ff8f34c26e58e3f5cbf7e9fed68a105f206427d2d3640655ac8"
+    },
+    {
+      "table": "res_partner",
+      "original_rows": 5,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "a9baa3d578b952aa00a5710311befb11eca8f1b2724a4139983cc12790074f52"
+    },
+    {
+      "table": "sale_order",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "sale_order_line",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "stock_lot",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "stock_move",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "stock_quant",
+      "original_rows": 0,
+      "changed_or_missing_ids": [],
+      "new_rows": 0,
+      "original_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "uom_uom",
+      "original_rows": 30,
+      "changed_or_missing_ids": [],
+      "new_rows": 9,
+      "original_sha256": "ecbdc611db5de48536491b450bf44464690998e47641f3697c332a2164fb58ff"
+    }
+  ],
+  "passed": true
+}

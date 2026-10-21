@@ -1,0 +1,16 @@
+Final Community validation — 2026-10-21
+
+Deployment: food-distribution-odoo-1 / food-distribution-db-1
+Database: food_distribution
+Modules updated: food_distribution, food_distribution_planning, food_distribution_quality
+
+Odoo post-install selected tests: 18 tests, 0 failed, 0 errors
+The loaded suites report 10 food_distribution, 5 planning, and 9 quality
+tests; the selected tag run executes the applicable post-install subset.
+
+Compatibility correction validated on the isolated legacy database:
+legacy field XML IDs are recreated during both pre-init and post-init, so
+module updates preserve the original identifiers and field records.
+
+Runtime containers after validation: PostgreSQL healthy; Odoo healthy.
+Temporary migration container stopped after validation.

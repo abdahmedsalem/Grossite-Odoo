@@ -1,0 +1,8 @@
+﻿{
+    "commit":  "a9f2ec8693394b01cb0d50ce27713d7926ea922a",
+    "repository":  "https://github.com/OCA/manufacture",
+    "branch":  "19.0",
+    "module":  "quality_control_oca",
+    "archive_sha256":  "5448fa88b242afafe0117b07597ca6d82cdc7a070e840f9a1f921b962a87ddee",
+    "license":  "AGPL-3"
+}

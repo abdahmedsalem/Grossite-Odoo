@@ -1,0 +1,23 @@
+<odoo>
+    <record id="food_quality_point_list" model="ir.ui.view">
+        <field name="name">food.quality.point.list</field><field name="model">food.quality.point</field>
+        <field name="arch" type="xml"><list><field name="name"/><field name="test_id"/><field name="product_ids" widget="many2many_tags"/><field name="operation_id"/><field name="company_id" groups="base.group_multi_company"/></list></field>
+    </record>
+    <record id="food_quality_point_form" model="ir.ui.view">
+        <field name="name">food.quality.point.form</field><field name="model">food.quality.point</field>
+        <field name="arch" type="xml"><form><sheet><group><field name="name"/><field name="active"/><field name="company_id" groups="base.group_multi_company"/><field name="product_ids" widget="many2many_tags"/><field name="operation_id"/><field name="component_id"/><field name="test_id"/><field name="label_step"/></group></sheet></form></field>
+    </record>
+    <record id="action_food_quality_points" model="ir.actions.act_window"><field name="name">Food Quality Points</field><field name="res_model">food.quality.point</field><field name="view_mode">list,form</field></record>
+    <menuitem id="menu_food_quality_points" name="Food Quality Points" parent="quality_control_oca.qc_menu_test_parent" action="action_food_quality_points"/>
+    <record id="mrp_production_food_quality" model="ir.ui.view">
+        <field name="name">mrp.production.food.quality</field><field name="model">mrp.production</field><field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml"><xpath expr="//notebook" position="inside"><page string="Food Quality" name="food_quality"><field name="food_inspection_ids" readonly="1"><list create="0" delete="0"><field name="name"/><field name="test"/><field name="food_workorder_id"/><field name="state"/><field name="success"/></list></field></page></xpath></field>
+    </record>
+    <record id="qc_inspection_food_link" model="ir.ui.view">
+        <field name="name">qc.inspection.food.link</field><field name="model">qc.inspection</field><field name="inherit_id" ref="quality_control_oca.qc_inspection_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside"><field name="food_point_id" invisible="1"/><button name="action_print_food_label" type="object" string="Generate Food Label" invisible="not food_point_id"/></xpath>
+            <xpath expr="//sheet" position="inside"><group string="Food Manufacturing"><field name="food_production_id" readonly="1"/><field name="food_workorder_id" readonly="1"/><field name="food_label_printed" readonly="1"/></group></xpath>
+        </field>
+    </record>
+</odoo>

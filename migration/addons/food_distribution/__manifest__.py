@@ -1,0 +1,27 @@
+{
+    'name': 'Food Distribution Community',
+    'version': '19.0.2.0.1',
+    'category': 'Supply Chain',
+    'author': 'Odoo S.A., Community migration',
+    'license': 'OEEL-1',
+    'summary': 'Food ingredients, allergens, nutritional facts and labels on native Community workflows',
+    'depends': ['base_industry_data', 'sale_management', 'purchase_mrp', 'sale_mrp',
+                'sale_purchase_stock', 'sale_purchase_project', 'product_expiry', 'mail'],
+    'data': [
+        'security/ir.model.access.csv', 'data/ir_default.xml',
+        'views/nutritional_facts_views.xml', 'views/nutritional_facts_actions.xml',
+        'views/nutritional_facts_menus.xml', 'report/lot_label_templates.xml',
+        'report/paperformat.xml', 'views/res_config_settings_views.xml',
+        'data/uom_uom.xml', 'data/x_nutritional_facts.xml',
+    ],
+    'demo': [
+        'demo/product_category.xml', 'demo/product_template.xml', 'demo/product_product.xml',
+        'demo/mrp_workcenter.xml', 'demo/mrp_bom.xml', 'demo/mrp_bom_line.xml',
+        'demo/mrp_routing_workcenter.xml', 'demo/product_supplierinfo.xml',
+        'demo/sale_order_template.xml', 'demo/sale_order_template_line.xml',
+    ],
+    'pre_init_hook': 'pre_init_hook',
+    'post_init_hook': 'post_init_hook',
+    'application': True,
+    'installable': True,
+}

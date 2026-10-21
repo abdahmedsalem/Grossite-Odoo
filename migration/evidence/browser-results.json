@@ -1,0 +1,72 @@
+﻿[
+    {
+        "path":  "/odoo",
+        "name":  "home",
+        "text":  "Discuss\nDiscuss\nChannels\nConfiguration\n3\nStockPro Demo\nStarred messages\nChannels\nAdministrators\ngeneral\nDirect messages\nOdooBot\nNo conversation selected.",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-458",
+        "name":  "sale",
+        "text":  "Sales\nOrders\nTo Invoice\nProducts\nReporting\nConfiguration\n3\nStockPro Demo\nNew\nQuotations\nMy Quotations\n\n\nBeat competitors with stunning quotations!\n\nBoost sales with online payments or signatures, upsells, and a great customer portal.\n\nCheck a sample. It\u0027s clean!\n\t\nNumber\n\t\nCreation Date\n\t\nCustomer\n\t\nSalesperson\n\t\nActivities\n\t\nTotal\n\t\nStatus\n\t\n\n\n\tREF0001\tOct 15, 4:50 AM\tHenry Campbell\t\nThomas Passot\n\tViverra nam\t$ 72,428.00\t\nQuotation Sent\n\t\n\n\tREF0002\tOct 23, 6:50 AM\tWendi Baltz\t\nHenry Campbell\n\tIn massa\t$ 5,907.00\t\nCancelled\n\t\n\n\tREF0003\tOct 26, 9:50 PM\tHenry Campbell\t\nThomas Passot\n\tIn massa\t$ 94,594.00\t\nCancelled\n\t\n\n\tREF0004\tDec 11, 11:50 AM\tWendi Baltz\t\nJohn Miller\n\tVolutpat blandit\t$ 60,216.00\t\nQuotation Sent\n\t\n\n\tREF0005\tOct 27, 9:50 AM\tHenry Campbell\t\nJohn Miller\n\tLaoreet id\t$ 3,095.00\t\nSales Order\n\t\n\n\tREF0006\tNov 6, 10:50 PM\tThomas Passot\t\nWendi Baltz\n\tInteger vitae\t$ 53,311.00\t\nQuotation\n\t\n\n\tREF0007\tOct 15, 2:50 AM\tJohn Miller\t\nJohn Miller\n\tLaoreet id\t$ 39,848.00\t\nCancelled\n\t\n\n\tREF0008\tDec 9, 3:50 AM\tThomas Passot\t\nJohn Miller\n\tViverra nam\t$ 13,569.00\t\nQuotation Sent\n\t\n\n\tREF0009\tOct 25, 9:50 AM\tHenry Campbell\t\nHenry Campbell\n\tInteger vitae\t$ 55,251.00\t\nQuotation\n\t\n\n\tREF0010\tDec 14, 6:50 PM\tCarrie Helle\t\nJohn Miller\n\tLaoreet id\t$ 12,931.00\t\nCancelled\n\t\n\t$ 411,150.00\t",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-419",
+        "name":  "purchase",
+        "text":  "Purchase\nOrders\nProducts\nReporting\nConfiguration\n3\nStockPro Demo\nNew\nUpload\nRequests for Quotation\n0\nNew\n0\nRFQ Sent\n0\nLate RFQ\n0\nNot Acknowledged\n0\nLate Receipt\n100 %\nOTD\n0.00\nDays to Order\n\nNo request for quotation found. Let\u0027s create one!\n\nRequests for quotation are documents that will be sent to your suppliers to request prices for different products you consider buying. Once an agreement has been found with the supplier, they will be confirmed and turned into purchase orders.\n\n\t\t\nReference\n\t\nVendor\n\t\nBuyer\n\t\nOrder Deadline\n\t\nActivities\n\t\nTotal\n\t\nStatus\n\t\n\n\n\t\n\tREF0001\tCarrie Helle\t\nWendi Baltz\n\t\tViverra nam\t$ 804.00\t\nCancelled\n\t\n\n\t\n\tREF0002\tWendi Baltz\t\nJohn Miller\n\t\tViverra nam\t$ 39,362.00\t\nCancelled\n\t\n\n\t\n\tREF0003\tCarrie Helle\t\nThomas Passot\n\t\tViverra nam\t$ 34,461.00\t\nPurchase Order\n\t\n\n\t\n\tREF0004\tHenry Campbell\t\nWendi Baltz\n\t\nIn 2 months\n\tLaoreet id\t$ 10,442.00\t\nTo Approve\n\t\n\n\t\n\tREF0005\tHenry Campbell\t\nCarrie Helle\n\t\n8 days ago\n\tInteger vitae\t$ 31,335.00\t\nRFQ Sent\n\t\n\n\t\n\tREF0006\tThomas Passot\t\nCarrie Helle\n\t\tInteger vitae\t$ 5,935.00\t\nPurchase Order\n\t\n\n\t\n\tREF0007\tCarrie Helle\t\nThomas Passot\n\t\tIn massa\t$ 53,093.00\t\nPurchase Order\n\t\n\n\t\n\tREF0008\tWendi Baltz\t\nCarrie Helle\n\t\nLast month\n\tVolutpat blandit\t$ 7,141.00\t\nRFQ\n\t\n\n\t\n\tREF0009\tCarrie Helle\t\nJohn Miller\n\t\nIn 21 days\n\tIn massa\t$ 5,397.00\t\nTo Approve\n\t\n\n\t\n\tREF0010\tWendi Baltz\t\nHenry Campbell\n\t\n18 days ago\n\tLaoreet id\t$ 96,618.00\t\nTo Approve\n\t\n\t$ 284,588.00\t",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-385",
+        "name":  "stock",
+        "text":  "Inventory\nOverview\nOperations\nProducts\nReporting\nConfiguration\n3\nStockPro Demo\nInventory Overview\n1-3 / 3\nReceipts\nOpen\nDelivery Orders\nOpen\nManufacturing\nOpen",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-519",
+        "name":  "mrp",
+        "text":  "Manufacturing\nOperations\nProducts\nFood Production Forecasts\nConfiguration\n3\nStockPro Demo\nNew\nManufacturing Orders\nTo Do\n\nNo manufacturing order found. Let\u0027s create one.\n\nUse Manufacturing Orders (MO) to build finished products while consuming components: i.e. 1 Table = 4 Table Legs + 1 Table Top\n\n\t\t\nReference\n\t\nStart\n\t\nProduct\n\t\nNext Activity\n\t\nSource\n\t\nComponent Status\n\t\nQuantity\n\t\nState\n\t\t\t\n\n\n\t\n\tREF0001\t\n28 days ago\n\tIn massa\tInteger vitae\t\t\t0.38\t\nConfirmed\n\t\n\t\t\n\n\t\n\tREF0002\t\n22 days ago\n\tLaoreet id\tVolutpat blandit\t\t\t43.53\t\nConfirmed\n\t\n\t\t\n\n\t\n\tREF0003\t\nIn 30 days\n\tIn massa\tLaoreet id\t\t\t57.55\t\nCancelled\n\t\n\t\t\n\n\t\n\tREF0004\t\nIn 23 days\n\tVolutpat blandit\tViverra nam\t\t\t71.98\t\nDraft\n\t\n\t\t\n\n\t\n\tREF0005\t\nLast month\n\tInteger vitae\tIn massa\t\t\t16.03\t\nCancelled\n\t\n\t\t\n\n\t\n\tREF0006\t\n12 days ago\n\tIn massa\tIn massa\t\t\t25.55\t\nDraft\n\t\n\t\t\n\n\t\n\tREF0007\t\nLast month\n\tVolutpat blandit\tVolutpat blandit\t\t\t38.14\t\nDraft\n\t\n\t\t\n\n\t\n\tREF0008\t\n9 days ago\n\tInteger vitae\tInteger vitae\t\t\t38.40\t\nIn Progress\n\t\n\t\t\n\n\t\n\tREF0009\t\nTomorrow\n\tVolutpat blandit\tVolutpat blandit\t\t\t11.78\t\nDone\n\t\n\t\t\n\n\t\n\tREF0010\t\nYesterday\n\tInteger vitae\tInteger vitae\t\t\t72.13\t\nDraft\n\t\n\t\t\n\t375.47\t",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-604",
+        "name":  "food_distribution_quality",
+        "text":  "Quality Control\nInspections\nTests\nConfiguration\n3\nStockPro Demo\nNew\nFood Quality Points\n\t\nName\n\t\nTest\n\t\nProducts\n\t\nOperation\n\n​\n​\n​\n​\n",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-598",
+        "name":  "quality_control_oca",
+        "text":  "Quality Control\nInspections\nTests\nConfiguration\n3\nStockPro Demo\nNew\nInspections\n\nCreate new document\n\n\t\nInspection number\n\t\nResponsible\n\t\nTest\n\t\nQuantity\n\t\nProduct\n\t\nPlan Date\n\t\nCompletion Date\n\t\nSuccess\n\t\nState\n\t\n\n\t",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-603",
+        "name":  "food_distribution_planning",
+        "text":  "Manufacturing\nOperations\nProducts\nFood Production Forecasts\nConfiguration\n3\nStockPro Demo\nNew\nFood Production Forecasts\n\nCreate new document\n\n\t\nDate Start\n\t\nDate End\n\t\nProduct\n\t\nQuantity\n\t\nBom\n\t\nProduction\n\t\nState\n\n",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-594",
+        "name":  "food_distribution",
+        "text":  "Inventory\nOverview\nOperations\nProducts\nReporting\nConfiguration\n3\nStockPro Demo\nNew\nNutritional Facts\n1-11 / 11\n\t\t\nDescription\n\t\nUnit\n\t\nParent\n\t\n\n\n\t\tBROWSER Nutrition 144923\t\t\t\n\n\t\tEnergy\tKcal\t\t\n\n\t\tProtein\tg\t\t\n\n\t\tCarbohydrates\tg\t\t\n\n\t\tAdded Sugar\tg\tCarbohydrates\t\n\n\t\tDietary Fibre\tg\tCarbohydrates\t\n\n\t\tFat\tg\t\t\n\n\t\tSaturated fatty acids\tg\tFat\t\n\n\t\tMono saturated fatty acids\tg\tFat\t\n\n\t\tPoly saturated fatty acids\tg\tFat\t\n\n\t\tSalt\tmg\t\t\n\t",
+        "passed":  true
+    },
+    {
+        "record_name":  "BROWSER Nutrition 145046",
+        "name":  "nutrition-create-save",
+        "passed":  true
+    },
+    {
+        "path":  "/odoo/action-177/14",
+        "name":  "product-form",
+        "text":  "Inventory\nOverview\nOperations\nProducts\nReporting\nConfiguration\n3\nStockPro Demo\nNew\nProducts\nMIGRATION PREVIEW Food\n0.00\n0.00\nOn Hand\nForecasted\n0\nBill of Materials\n0\nDocuments\n0.00\nSold\n0.00\nPurchased\n0\nReordering Rules\nIn:\n0\nOut:\n0\nLot/Serial Numbers\n1 / 1\nProduct\nSales\nPurchase\nGeneral Information\nSales\nPurchase\nInventory\nLabel\nProduct Type?\nGoods\nService\nCombo\nInvoicing Policy?\nTrack Inventory?\nQuantity On Hand\n0.00\nSales Price?\n$ \n1.00\n$ \nSales Taxes?\n15%\n(= $ 1.15 Incl. Taxes)\nCost?\n$ \n0.00\n$ \nPurchase Taxes?\n15%\nCategory\nReference\nBarcode\nINTERNAL NOTES\n\n\nSend message\nLog note\nActivity\n0\nToday\nOdooBot\n2:36 PM\n\nProduct created",
+        "passed":  true
+    },
+    {
+        "product_id":  14,
+        "name":  "product-food-fields",
+        "passed":  true
+    }
+]

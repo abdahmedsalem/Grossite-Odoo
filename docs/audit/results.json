@@ -1,0 +1,2468 @@
+{
+  "generated_utc": "2026-10-20T13:50:47.690986+00:00",
+  "database": "food_distribution_audit_20261020_133630",
+  "odoo_version": "19.0-20260609",
+  "modules": {
+    "base_industry_data": {
+      "license": "OEEL-1",
+      "dependencies": [
+        {
+          "name": "base",
+          "code_present": true,
+          "state": "installed",
+          "license": "LGPL-3"
+        },
+        {
+          "name": "knowledge",
+          "code_present": false,
+          "state": "uninstallable",
+          "license": null
+        }
+      ],
+      "files": [
+        {
+          "path": "data/knowledge_tour.xml",
+          "section": "data",
+          "records": 1,
+          "models": {
+            "web_tour.tour": 1
+          },
+          "sha256": "7595bbd3adb6bb10a3787c74627c37fd848208a72edfada1846df47ec420fdaf"
+        },
+        {
+          "path": "data/res_partner_category.xml",
+          "section": "data",
+          "records": 13,
+          "models": {
+            "res.partner.category": 13
+          },
+          "sha256": "3494e6aff8d02bb2f04111ae88760b2e0e3ccd0768195e93cad24501b829c4bc"
+        },
+        {
+          "path": "demo/ir_cron.xml",
+          "section": "demo",
+          "records": 1,
+          "models": {
+            "ir.cron": 1
+          },
+          "sha256": "977322f456fb44f2008d675c3942ca066f3e21eaf1e95a8528e64007de34491b"
+        },
+        {
+          "path": "demo/res_users.xml",
+          "section": "demo",
+          "records": 3,
+          "models": {
+            "res.users": 3
+          },
+          "sha256": "f70b84c03f5020ebb97c93971d06c2eecb5c35595d55864946ea96ab8294c49f"
+        },
+        {
+          "path": "demo/res_partner.xml",
+          "section": "demo",
+          "records": 18,
+          "models": {
+            "res.partner": 18
+          },
+          "sha256": "31b4e76ced538d97bd4b23dced2d6da34e117c434c177f4bce2a29a231a3ef95"
+        },
+        {
+          "path": "demo/res_partner_category.xml",
+          "section": "demo",
+          "records": 12,
+          "models": {
+            "res.partner.category": 12
+          },
+          "sha256": "465e3aabf585fcd4723fe19a2d33865acbb758e7a7644bc7968fdc31d0b11b63"
+        }
+      ],
+      "custom_models": [],
+      "custom_fields": [],
+      "missing_models": [],
+      "missing_fields": [],
+      "unresolved_references": [],
+      "executables": [],
+      "views": [],
+      "access_rules": [],
+      "relocation_plan": [
+        {
+          "source": "data/knowledge_tour.xml",
+          "destination": "data/knowledge_tour.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/res_partner_category.xml",
+          "destination": "data/res_partner_category.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/ir_cron.xml",
+          "destination": "demo/ir_cron.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/res_users.xml",
+          "destination": "demo/res_users.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/res_partner.xml",
+          "destination": "demo/res_partner.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/res_partner_category.xml",
+          "destination": "demo/res_partner_category.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        }
+      ],
+      "parse_errors": [],
+      "resources_missing": [],
+      "node_counts": {
+        "record": 48,
+        "template": 0,
+        "menuitem": 0,
+        "function": 0
+      },
+      "function_compatibility": [],
+      "generated_reference_verified": "base_industry_data.res_users_7_res_partner"
+    },
+    "food_distribution": {
+      "license": "OEEL-1",
+      "dependencies": [
+        {
+          "name": "appointment_account_payment",
+          "code_present": false,
+          "state": "not_registered",
+          "license": null
+        },
+        {
+          "name": "base_industry_data",
+          "code_present": true,
+          "state": "uninstalled",
+          "license": "OEEL-1"
+        },
+        {
+          "name": "mrp_mps",
+          "code_present": false,
+          "state": "not_registered",
+          "license": null
+        },
+        {
+          "name": "product_expiry",
+          "code_present": true,
+          "state": "installed",
+          "license": "LGPL-3"
+        },
+        {
+          "name": "project_mrp_workorder_account",
+          "code_present": false,
+          "state": "not_registered",
+          "license": null
+        },
+        {
+          "name": "purchase_mrp",
+          "code_present": true,
+          "state": "installed",
+          "license": "LGPL-3"
+        },
+        {
+          "name": "quality_mrp_workorder_worksheet",
+          "code_present": false,
+          "state": "not_registered",
+          "license": null
+        },
+        {
+          "name": "sale_mrp",
+          "code_present": true,
+          "state": "installed",
+          "license": "LGPL-3"
+        },
+        {
+          "name": "sale_planning",
+          "code_present": false,
+          "state": "not_registered",
+          "license": null
+        },
+        {
+          "name": "sale_purchase_project",
+          "code_present": true,
+          "state": "uninstalled",
+          "license": "LGPL-3"
+        },
+        {
+          "name": "sale_purchase_stock",
+          "code_present": true,
+          "state": "installed",
+          "license": "LGPL-3"
+        },
+        {
+          "name": "spreadsheet_sale_management",
+          "code_present": false,
+          "state": "not_registered",
+          "license": null
+        },
+        {
+          "name": "stock_barcode",
+          "code_present": false,
+          "state": "uninstallable",
+          "license": null
+        },
+        {
+          "name": "web_studio",
+          "code_present": false,
+          "state": "uninstallable",
+          "license": null
+        }
+      ],
+      "files": [
+        {
+          "path": "data/ir_model.xml",
+          "section": "data",
+          "records": 3,
+          "models": {
+            "ir.model": 3
+          },
+          "sha256": "ce80c41142cc90b705d1eef4aaf31cc67f9d2b734f014e2cb5732344938c842a"
+        },
+        {
+          "path": "data/ir_model_access.xml",
+          "section": "data",
+          "records": 6,
+          "models": {
+            "ir.model.access": 6
+          },
+          "sha256": "aa04cf1471649562edce3cfa9c7fc56c4802ffa25550f5f7ae634599a2a9707a"
+        },
+        {
+          "path": "data/ir_model_fields.xml",
+          "section": "data",
+          "records": 19,
+          "models": {
+            "ir.model.fields": 19
+          },
+          "sha256": "8a617cd5b08da76e37a2a028326a564192faab780a700b6a9a2470402773d8ff"
+        },
+        {
+          "path": "data/ir_default.xml",
+          "section": "data",
+          "records": 1,
+          "models": {
+            "ir.default": 1
+          },
+          "sha256": "b1d3e4be5d7e6b2a83edcb52c11e6536b0fd74f5c3ba91fd0f826260a66f1620"
+        },
+        {
+          "path": "data/ir_ui_view.xml",
+          "section": "data",
+          "records": 4,
+          "models": {
+            "ir.ui.view": 4
+          },
+          "sha256": "738d2ca9d7df7eed4fcdba060e7647440882b2d02f8329863551e2ade8b71690"
+        },
+        {
+          "path": "data/ir_actions_act_window.xml",
+          "section": "data",
+          "records": 1,
+          "models": {
+            "ir.actions.act_window": 1
+          },
+          "sha256": "36bae020ed36949d97a6a0728369a939282706965ce3f3dca18edd982d793e99"
+        },
+        {
+          "path": "data/ir_ui_menu.xml",
+          "section": "data",
+          "records": 0,
+          "models": {},
+          "sha256": "86831ad1eb22a480a7d079cf81974ecccf9240704ca43e34dad22854d0c2a8e2"
+        },
+        {
+          "path": "data/qweb_view.xml",
+          "section": "data",
+          "records": 2,
+          "models": {
+            "ir.ui.view": 2
+          },
+          "sha256": "b29d27976a1bfa745b2dc538f789b85612eec6d4273cc7edb7a9de9e64d5379b"
+        },
+        {
+          "path": "data/report_paperformat.xml",
+          "section": "data",
+          "records": 2,
+          "models": {
+            "report.paperformat": 1,
+            "ir.actions.report": 1
+          },
+          "sha256": "605cdfb365cb93dacdadcbe1e5b656734457281ca3c543eced60143305dd8d76"
+        },
+        {
+          "path": "data/res_config_settings.xml",
+          "section": "data",
+          "records": 6,
+          "models": {
+            "res.config.settings": 1,
+            "ir.model.fields": 2,
+            "ir.actions.server": 1,
+            "base.automation": 1,
+            "ir.ui.view": 1
+          },
+          "sha256": "091910506e1ec0c2d11036725aebcba2b9b75865bd1f657ea9e3b3bbc2d9cbf3"
+        },
+        {
+          "path": "data/res_company.xml",
+          "section": "data",
+          "records": 1,
+          "models": {
+            "res.company": 1
+          },
+          "sha256": "4f95847f3833063f8b2cafdbbe16760f8e67b9cbc7536c0945a1c8c7d5cd3fb5"
+        },
+        {
+          "path": "data/knowledge_article.xml",
+          "section": "data",
+          "records": 1,
+          "models": {
+            "knowledge.article": 1
+          },
+          "sha256": "0094a144d9b16503b2ab7b142f28918cb139a1be9e9a5aa3fc4bc4dc040be6a5"
+        },
+        {
+          "path": "data/product_category.xml",
+          "section": "data",
+          "records": 5,
+          "models": {
+            "product.category": 5
+          },
+          "sha256": "66f98c4f890e4cb96d4d7c8496ab2a36892ef7c5f630dc2e50b5098015cd1ca6"
+        },
+        {
+          "path": "data/uom_uom.xml",
+          "section": "data",
+          "records": 12,
+          "models": {
+            "uom.uom": 12
+          },
+          "sha256": "aeb20a0dbaf2d61529d9106c1bbde9c1306849f55c8d4f0ef6dae70227c23f92"
+        },
+        {
+          "path": "data/x_nutritional_facts.xml",
+          "section": "data",
+          "records": 10,
+          "models": {
+            "x_nutritional_facts": 10
+          },
+          "sha256": "fa1f21b7fc4cc27fb9b57acef5f154f93083d65a20463d92bb9afbec78f2e9de"
+        },
+        {
+          "path": "data/product_template.xml",
+          "section": "data",
+          "records": 11,
+          "models": {
+            "product.template": 11
+          },
+          "sha256": "b3237c2ec5b07f9458388c5eb27a5aeb180575540ea4b5ab4bad7503f4874402"
+        },
+        {
+          "path": "data/product_product.xml",
+          "section": "data",
+          "records": 12,
+          "models": {
+            "product.product": 12
+          },
+          "sha256": "ff2d97345fbad073444503903db1bea5b0b2a4a84e45a7d59b6b0ece6c670a03"
+        },
+        {
+          "path": "data/mrp_bom.xml",
+          "section": "data",
+          "records": 3,
+          "models": {
+            "mrp.bom": 3
+          },
+          "sha256": "5a3758c2bf0f4bcc6ea8664b0d9fd08be027d5730770ee62973c4f9ee4eb6ec0"
+        },
+        {
+          "path": "data/mrp_bom_line.xml",
+          "section": "data",
+          "records": 10,
+          "models": {
+            "mrp.bom.line": 10
+          },
+          "sha256": "1f991c418747f1c4880bb3d6ac63d804f6c4687d23984e2816d3c2b9c3662d52"
+        },
+        {
+          "path": "data/mrp_bom_post.xml",
+          "section": "data",
+          "records": 0,
+          "models": {},
+          "sha256": "338f673f015cddd422e040b4f48df193ea0f4b6c307ed922a5828b48f48589d1"
+        },
+        {
+          "path": "data/mrp_workcenter.xml",
+          "section": "data",
+          "records": 2,
+          "models": {
+            "mrp.workcenter": 2
+          },
+          "sha256": "0414179b013d1583b8855af5790e9702fa7f721a0d9654cf6ab93e7839767c36"
+        },
+        {
+          "path": "data/mrp_routing_workcenter.xml",
+          "section": "data",
+          "records": 3,
+          "models": {
+            "mrp.routing.workcenter": 3
+          },
+          "sha256": "ed22fc59e91f9713c234ec791966c2938a3e44489e8b7e9d4fd4ee42561a755e"
+        },
+        {
+          "path": "data/quality_point.xml",
+          "section": "data",
+          "records": 16,
+          "models": {
+            "quality.point": 16
+          },
+          "sha256": "ae351ab9dea0b9a205345d4c8f6257c995c762b53c6bc5e76b8d6f10f7f0a26f"
+        },
+        {
+          "path": "data/mail_message.xml",
+          "section": "data",
+          "records": 1,
+          "models": {
+            "mail.message": 1
+          },
+          "sha256": "4c7e561730ff66f8401394e39dbf6290d90071c78787c037c610de52fc20f33c"
+        },
+        {
+          "path": "data/knowledge_article_favorite.xml",
+          "section": "data",
+          "records": 1,
+          "models": {
+            "knowledge.article.favorite": 1
+          },
+          "sha256": "29db1bc70912b43f274771042937712224b8c8d0b05f7bd9b9ae1fc236a1726b"
+        },
+        {
+          "path": "data/sale_order_template.xml",
+          "section": "data",
+          "records": 2,
+          "models": {
+            "sale.order.template": 2
+          },
+          "sha256": "f835a19ed7e80001c80e60333859fa809d5a2e4ac56b9a9e7c8f962e93da369f"
+        },
+        {
+          "path": "data/sale_order_template_line.xml",
+          "section": "data",
+          "records": 4,
+          "models": {
+            "sale.order.template.line": 4
+          },
+          "sha256": "45f84246638e7979be0e9bfb8c9db2e64910cb9825be5cac659ce3eecec50dae"
+        },
+        {
+          "path": "demo/res_company.xml",
+          "section": "demo",
+          "records": 1,
+          "models": {
+            "res.company": 1
+          },
+          "sha256": "094c8dac754f220548835c98e7975e5cbf9a5580651f3043fa94f8410f45fb94"
+        },
+        {
+          "path": "demo/stock_warehouse_orderpoint.xml",
+          "section": "demo",
+          "records": 4,
+          "models": {
+            "stock.warehouse.orderpoint": 4
+          },
+          "sha256": "2b0a8b656061dfad40d374756da0f9e37c93f82dab343b453c3a4292f869b3e1"
+        },
+        {
+          "path": "demo/stock_lot.xml",
+          "section": "demo",
+          "records": 8,
+          "models": {
+            "stock.lot": 8
+          },
+          "sha256": "1f3aeb9ceb74efb28ba259c6c1803c361e38252f0b83780813d1600a05da0d5d"
+        },
+        {
+          "path": "demo/stock_quant.xml",
+          "section": "demo",
+          "records": 1,
+          "models": {
+            "stock.quant": 1
+          },
+          "sha256": "51b6ae8635c28d1fa5186567c6685e1f4ddf0d2c8f137da3070049162ff7c147"
+        },
+        {
+          "path": "demo/purchase_order.xml",
+          "section": "demo",
+          "records": 3,
+          "models": {
+            "purchase.order": 3
+          },
+          "sha256": "1a2c9c5c12ac71eb766f15b63ec6bf2231fa27b750b461ba112f821fb98a0b3c"
+        },
+        {
+          "path": "demo/purchase_order_line.xml",
+          "section": "demo",
+          "records": 9,
+          "models": {
+            "purchase.order.line": 9
+          },
+          "sha256": "1486888a70a910310784c06cc387a41302354843f3ebe99045d36480ac84a820"
+        },
+        {
+          "path": "demo/purchase_order_confirm.xml",
+          "section": "demo",
+          "records": 0,
+          "models": {},
+          "sha256": "6e4992a9f8b33b3476852acd364ca2c0a78c9835b16a5540643c290a38d73405"
+        },
+        {
+          "path": "demo/product_supplierinfo.xml",
+          "section": "demo",
+          "records": 12,
+          "models": {
+            "product.supplierinfo": 12
+          },
+          "sha256": "f46a02686d599b856fc5c077d4899856ad1637502974468d30561fa0db3b6079"
+        },
+        {
+          "path": "demo/mrp_production_schedule.xml",
+          "section": "demo",
+          "records": 3,
+          "models": {
+            "mrp.production.schedule": 3
+          },
+          "sha256": "b614d3f7f07895ecc9f2c8546026cf4a67336c35b3a064cb4dc5375a289f670d"
+        },
+        {
+          "path": "demo/mrp_production.xml",
+          "section": "demo",
+          "records": 1,
+          "models": {
+            "stock.move.line": 1
+          },
+          "sha256": "dbed1d58b19de78b9200fd759e4ac82c31f64d32eaed90b112af9b5a7b9ffd8f"
+        },
+        {
+          "path": "demo/sale_order.xml",
+          "section": "demo",
+          "records": 4,
+          "models": {
+            "sale.order": 4
+          },
+          "sha256": "19d7635f256cc7905cb15437816338ffe4391d06fa7858d973761df5c7644215"
+        },
+        {
+          "path": "demo/sale_order_line.xml",
+          "section": "demo",
+          "records": 5,
+          "models": {
+            "sale.order.line": 5
+          },
+          "sha256": "6aad4f357d6e3537b153a6d8d8505f1945d13d911d6208abee047226d5235ca4"
+        },
+        {
+          "path": "demo/sale_order_confirm.xml",
+          "section": "demo",
+          "records": 0,
+          "models": {},
+          "sha256": "4431adb92b0a960985fdc86c56750d0bd3e6651e781ce9f756adab40d5817755"
+        }
+      ],
+      "custom_models": [
+        {
+          "file": "data/ir_model.xml",
+          "id": "model_x_nutritional_facts",
+          "model": "ir.model",
+          "fields": {
+            "is_mail_thread": "True",
+            "is_mail_activity": "True",
+            "model": "x_nutritional_facts",
+            "name": "Nutritional Facts"
+          }
+        },
+        {
+          "file": "data/ir_model.xml",
+          "id": "model_x_product_template_ingredients",
+          "model": "ir.model",
+          "fields": {
+            "model": "x_product_template_ingredients",
+            "name": "Product Template Ingredients"
+          }
+        },
+        {
+          "file": "data/ir_model.xml",
+          "id": "model_x_product_template_nutritional_fact",
+          "model": "ir.model",
+          "fields": {
+            "model": "x_product_template_nutritional_fact",
+            "name": "Product Template Nutritional Fact"
+          }
+        }
+      ],
+      "custom_fields": [
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_product_template_label_note",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "text",
+            "field_description": "Label Note",
+            "model_id": "product.model_product_template",
+            "name": "x_label_note"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_product_template_is_allergen",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "boolean",
+            "field_description": "Is Allergen",
+            "model_id": "product.model_product_template",
+            "name": "x_is_allergen"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_nutritional_facts_name",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "char",
+            "field_description": "Description",
+            "model_id": "model_x_nutritional_facts",
+            "name": "x_name",
+            "required": "True",
+            "tracking": "1",
+            "translate": "standard"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_nutritional_facts_active",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "boolean",
+            "field_description": "Active",
+            "model_id": "model_x_nutritional_facts",
+            "name": "x_active",
+            "tracking": "1"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_nutritional_facts_sequence",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "integer",
+            "field_description": "Sequence",
+            "model_id": "model_x_nutritional_facts",
+            "name": "x_sequence"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_nutritional_facts_parent",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "many2one",
+            "field_description": "Parent",
+            "model_id": "model_x_nutritional_facts",
+            "name": "x_parent",
+            "relation": "x_nutritional_facts"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_nutritional_facts_unit",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "many2one",
+            "field_description": "Unit",
+            "model_id": "model_x_nutritional_facts",
+            "name": "x_unit_id",
+            "relation": "uom.uom"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_nutritional_fact_product_template_id",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "many2one",
+            "field_description": "Product",
+            "model_id": "model_x_product_template_nutritional_fact",
+            "name": "x_product_template_id",
+            "relation": "product.template"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_nutritional_fact_nutritional_fact_id",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "many2one",
+            "field_description": "Nutritional Fact",
+            "model_id": "model_x_product_template_nutritional_fact",
+            "name": "x_nutritional_fact_id",
+            "relation": "x_nutritional_facts"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_nutritional_fact_per_100g",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "float",
+            "field_description": "Per 100g",
+            "model_id": "model_x_product_template_nutritional_fact",
+            "name": "x_per_100g",
+            "required": "True"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_nutritional_fact_unit",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "many2one",
+            "related": "x_nutritional_fact_id.x_unit_id",
+            "field_description": "Unit",
+            "model_id": "model_x_product_template_nutritional_fact",
+            "name": "x_unit_id",
+            "readonly": "True",
+            "relation": "uom.uom",
+            "store": "False"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_nutritional_fact_sequence",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "integer",
+            "field_description": "Sequence",
+            "model_id": "model_x_product_template_nutritional_fact",
+            "name": "x_sequence",
+            "related": "x_nutritional_fact_id.x_sequence",
+            "store": "False"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_ingredients_product_template_id",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "many2one",
+            "field_description": "Product",
+            "model_id": "model_x_product_template_ingredients",
+            "name": "x_product_template_id",
+            "relation": "product.template"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_ingredients_ingredient_id",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "many2one",
+            "field_description": "Ingredient",
+            "model_id": "model_x_product_template_ingredients",
+            "name": "x_ingredient_id",
+            "relation": "product.template"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_ingredients_is_allergen",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "boolean",
+            "related": "x_ingredient_id.x_is_allergen",
+            "field_description": "Is Allergen",
+            "model_id": "model_x_product_template_ingredients",
+            "name": "x_is_allergen",
+            "readonly": "True",
+            "store": "False"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_ingredients_sequence",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "integer",
+            "field_description": "Sequence",
+            "model_id": "model_x_product_template_ingredients",
+            "name": "x_sequence"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_x_product_template_ingredients_share",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "integer",
+            "field_description": "Proportion (%)",
+            "model_id": "model_x_product_template_ingredients",
+            "name": "x_share"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_product_template_nutritional_facts",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "one2many",
+            "field_description": "Nutritional Facts",
+            "model_id": "product.model_product_template",
+            "name": "x_nutritional_fact_ids",
+            "relation": "x_product_template_nutritional_fact",
+            "relation_field": "x_product_template_id"
+          }
+        },
+        {
+          "file": "data/ir_model_fields.xml",
+          "id": "field_product_template_ingredients",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "one2many",
+            "field_description": "Ingredients",
+            "model_id": "product.model_product_template",
+            "name": "x_ingredient_ids",
+            "relation": "x_product_template_ingredients",
+            "relation_field": "x_product_template_id"
+          }
+        },
+        {
+          "file": "data/res_config_settings.xml",
+          "id": "field_res_company_x_module_food_drinks_labels",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "boolean",
+            "field_description": "Food & Drinks Labels",
+            "model_id": "base.model_res_company",
+            "name": "x_module_food_drinks_labels"
+          }
+        },
+        {
+          "file": "data/res_config_settings.xml",
+          "id": "field_res_config_setting_x_module_food_drinks_labels",
+          "model": "ir.model.fields",
+          "fields": {
+            "ttype": "boolean",
+            "related": "company_id.x_module_food_drinks_labels",
+            "field_description": "Food & Drinks Labels",
+            "model_id": "base_setup.model_res_config_settings",
+            "name": "x_module_food_drinks_labels"
+          }
+        }
+      ],
+      "missing_models": [
+        {
+          "file": "data/res_config_settings.xml",
+          "id": "automation_toggle_food_drinks_labels",
+          "model": "base.automation",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/knowledge_article.xml",
+          "id": "welcome_article",
+          "model": "knowledge.article",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_1",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_2",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_3",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_4",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_5",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_6",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_7",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_8",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_9",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/x_nutritional_facts.xml",
+          "id": "x_nutritional_facts_10",
+          "model": "x_nutritional_facts",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_16",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_17",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_4",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_5",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_6",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_7",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_8",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_3",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_9",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_1",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_12",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_13",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_14",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_15",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_18",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "id": "quality_point_19",
+          "model": "quality.point",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "data/knowledge_article_favorite.xml",
+          "id": "knowledge_favorite",
+          "model": "knowledge.article.favorite",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "id": "production_schedule_1",
+          "model": "mrp.production.schedule",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "id": "production_schedule_2",
+          "model": "mrp.production.schedule",
+          "classification": "model_not_in_installed_registry"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "id": "production_schedule_3",
+          "model": "mrp.production.schedule",
+          "classification": "model_not_in_installed_registry"
+        }
+      ],
+      "missing_fields": [
+        {
+          "file": "data/res_config_settings.xml",
+          "id": "res_config_settings_enable",
+          "model": "res.config.settings",
+          "field": "group_mrp_wo_tablet_timer",
+          "classification": "field_not_in_installed_registry"
+        },
+        {
+          "file": "data/res_company.xml",
+          "id": "base.main_company",
+          "model": "res.company",
+          "field": "mrp_mps_show_actual_demand",
+          "classification": "field_not_in_installed_registry"
+        },
+        {
+          "file": "data/res_company.xml",
+          "id": "base.main_company",
+          "model": "res.company",
+          "field": "mrp_mps_show_actual_replenishment",
+          "classification": "field_not_in_installed_registry"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_8",
+          "model": "product.template",
+          "field": "x_is_allergen",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_12",
+          "model": "product.template",
+          "field": "x_label_note",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_12",
+          "model": "product.template",
+          "field": "x_is_allergen",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_12",
+          "model": "product.template",
+          "field": "x_ingredient_ids",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_12",
+          "model": "product.template",
+          "field": "x_nutritional_fact_ids",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_13",
+          "model": "product.template",
+          "field": "x_label_note",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_13",
+          "model": "product.template",
+          "field": "x_is_allergen",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_13",
+          "model": "product.template",
+          "field": "x_ingredient_ids",
+          "classification": "declared_by_source_module"
+        },
+        {
+          "file": "data/product_template.xml",
+          "id": "product_template_13",
+          "model": "product.template",
+          "field": "x_nutritional_fact_ids",
+          "classification": "declared_by_source_module"
+        }
+      ],
+      "unresolved_references": [
+        {
+          "file": "data/product_product.xml",
+          "xmlid": "appointment_account_payment.default_booking_product_product_template"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "xmlid": "mrp_workorder.test_type_print_label"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "xmlid": "mrp_workorder.test_type_register_consumed_materials"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "xmlid": "mrp_workorder.test_type_register_production"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "xmlid": "quality.test_type_instructions"
+        },
+        {
+          "file": "data/quality_point.xml",
+          "xmlid": "quality_control.test_type_measure"
+        }
+      ],
+      "executables": [
+        {
+          "file": "data/res_config_settings.xml",
+          "id": "action_toggle_food_drinks_labels",
+          "model": "ir.actions.server",
+          "fields": {
+            "code": "def toggle_food_drink_label(state):\n    if report := env.ref('stock.action_report_lot_label', raise_if_not_found=False):\n        report['paperformat_id'] = env.ref('food_distribution.report_paperformat_1').id if state else env.ref('product.paperformat_label_sheet').id\n    for to_unarchive in [\n        'food_distribution_inherit_product_template_only_form_view',\n        'food_distribution_inherit_report_lot_label',\n        'food_distribution_inherit_report_lot_label_expiry',\n        'inventory_nutritional_facts_menu',\n        'quality_point_18',\n        'quality_point_19'\n    ]:\n        if external_id := env.ref(f'food_distribution.{to_unarchive}', raise_if_not_found=False):\n            external_id['active'] = state\ntoggle_food_drink_label(record.x_module_food_drinks_labels)",
+            "model_id": "base_setup.model_res_config_settings",
+            "state": "code",
+            "name": "Food Distribution: Toggle Food & Drinks Labels",
+            "usage": "base_automation"
+          }
+        },
+        {
+          "file": "data/res_config_settings.xml",
+          "id": "automation_toggle_food_drinks_labels",
+          "model": "base.automation",
+          "fields": {
+            "model_id": "base_setup.model_res_config_settings",
+            "action_server_ids": "[(6, 0, [ref('action_toggle_food_drinks_labels')])]",
+            "trigger": "on_create_or_write",
+            "name": "Food Distribution: Toggle Food & Drinks Labels",
+            "trigger_field_ids": "[(6, 0, [ref('field_res_config_setting_x_module_food_drinks_labels')])]"
+          }
+        },
+        {
+          "file": "data/res_config_settings.xml",
+          "model": "res.config.settings",
+          "method": "execute",
+          "kind": "xml_function"
+        },
+        {
+          "file": "data/res_config_settings.xml",
+          "model": "ir.actions.server",
+          "method": "run",
+          "kind": "xml_function"
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "product.template",
+          "method": "button_bom_cost",
+          "kind": "xml_function"
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "product.template",
+          "method": "button_bom_cost",
+          "kind": "xml_function"
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "product.template",
+          "method": "button_bom_cost",
+          "kind": "xml_function"
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "stock.picking.type",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/stock_warehouse_orderpoint.xml",
+          "model": "stock.warehouse.orderpoint",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/stock_warehouse_orderpoint.xml",
+          "model": "stock.warehouse.orderpoint",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/stock_warehouse_orderpoint.xml",
+          "model": "stock.warehouse.orderpoint",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/stock_quant.xml",
+          "model": "stock.quant",
+          "method": "action_apply_inventory",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "purchase.order",
+          "method": "button_confirm",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.picking",
+          "method": "button_validate",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "action_replenish",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "button_mark_done",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "button_mark_done",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "sale.order",
+          "method": "action_confirm",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "stock.move",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "kind": "xml_function"
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "stock.picking",
+          "method": "button_validate",
+          "kind": "xml_function"
+        }
+      ],
+      "views": [
+        {
+          "file": "data/ir_ui_view.xml",
+          "id": "x_nutritional_facts_list_view",
+          "model": "ir.ui.view",
+          "target_model": "x_nutritional_facts",
+          "inherit_id": null
+        },
+        {
+          "file": "data/ir_ui_view.xml",
+          "id": "x_nutritional_facts_form_view",
+          "model": "ir.ui.view",
+          "target_model": "x_nutritional_facts",
+          "inherit_id": null
+        },
+        {
+          "file": "data/ir_ui_view.xml",
+          "id": "x_nutritional_facts_search_view",
+          "model": "ir.ui.view",
+          "target_model": "x_nutritional_facts",
+          "inherit_id": null
+        },
+        {
+          "file": "data/ir_ui_view.xml",
+          "id": "food_distribution_inherit_product_template_only_form_view",
+          "model": "ir.ui.view",
+          "target_model": "product.template",
+          "inherit_id": "product.product_template_only_form_view"
+        },
+        {
+          "file": "data/qweb_view.xml",
+          "id": "food_distribution_inherit_report_lot_label",
+          "model": "ir.ui.view",
+          "target_model": null,
+          "inherit_id": "stock.report_lot_label"
+        },
+        {
+          "file": "data/qweb_view.xml",
+          "id": "food_distribution_inherit_report_lot_label_expiry",
+          "model": "ir.ui.view",
+          "target_model": null,
+          "inherit_id": "product_expiry.report_lot_label_expiry"
+        },
+        {
+          "file": "data/res_config_settings.xml",
+          "id": "res_config_settings_form_view_inherited",
+          "model": "ir.ui.view",
+          "target_model": "res.config.settings",
+          "inherit_id": "base.res_config_settings_view_form"
+        }
+      ],
+      "access_rules": [
+        {
+          "file": "data/ir_model_access.xml",
+          "id": "access_model_x_nutritional_facts_group_system",
+          "model": "ir.model.access",
+          "fields": {
+            "group_id": "base.group_system",
+            "model_id": "model_x_nutritional_facts",
+            "name": "Nutritional facts group system",
+            "perm_create": "True",
+            "perm_read": "True",
+            "perm_unlink": "True",
+            "perm_write": "True"
+          }
+        },
+        {
+          "file": "data/ir_model_access.xml",
+          "id": "access_model_x_nutritional_facts_group_user",
+          "model": "ir.model.access",
+          "fields": {
+            "group_id": "base.group_user",
+            "model_id": "model_x_nutritional_facts",
+            "name": "Nutritional facts group user",
+            "perm_create": "True",
+            "perm_read": "True",
+            "perm_write": "True"
+          }
+        },
+        {
+          "file": "data/ir_model_access.xml",
+          "id": "access_model_x_product_template_ingredients_group_system",
+          "model": "ir.model.access",
+          "fields": {
+            "group_id": "base.group_system",
+            "model_id": "model_x_product_template_ingredients",
+            "name": "Product template ingredients group system",
+            "perm_create": "True",
+            "perm_read": "True",
+            "perm_unlink": "True",
+            "perm_write": "True"
+          }
+        },
+        {
+          "file": "data/ir_model_access.xml",
+          "id": "access_model_x_product_template_ingredients_group_user",
+          "model": "ir.model.access",
+          "fields": {
+            "group_id": "base.group_user",
+            "model_id": "model_x_product_template_ingredients",
+            "name": "Product template ingredients group user",
+            "perm_create": "True",
+            "perm_read": "True",
+            "perm_write": "True"
+          }
+        },
+        {
+          "file": "data/ir_model_access.xml",
+          "id": "access_model_x_product_template_nutritional_fact_group_system",
+          "model": "ir.model.access",
+          "fields": {
+            "group_id": "base.group_system",
+            "model_id": "model_x_product_template_nutritional_fact",
+            "name": "Product template nutritional fact group system",
+            "perm_create": "True",
+            "perm_read": "True",
+            "perm_unlink": "True",
+            "perm_write": "True"
+          }
+        },
+        {
+          "file": "data/ir_model_access.xml",
+          "id": "access_model_x_product_template_nutritional_fact_group_user",
+          "model": "ir.model.access",
+          "fields": {
+            "group_id": "base.group_user",
+            "model_id": "model_x_product_template_nutritional_fact",
+            "name": "Product template nutritional fact group user",
+            "perm_create": "True",
+            "perm_read": "True",
+            "perm_write": "True"
+          }
+        }
+      ],
+      "relocation_plan": [
+        {
+          "source": "data/ir_model.xml",
+          "destination": "data/ir_model.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/ir_model_access.xml",
+          "destination": "security/ir_model_access.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/ir_model_fields.xml",
+          "destination": "data/ir_model_fields.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/ir_default.xml",
+          "destination": "data/ir_default.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/ir_ui_view.xml",
+          "destination": "views/ir_ui_view.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/ir_actions_act_window.xml",
+          "destination": "views/ir_actions_act_window.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/ir_ui_menu.xml",
+          "destination": "views/ir_ui_menu.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/qweb_view.xml",
+          "destination": "views/qweb_view.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/report_paperformat.xml",
+          "destination": "data/report_paperformat.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/res_config_settings.xml",
+          "destination": "data/res_config_settings.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/res_company.xml",
+          "destination": "data/res_company.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/knowledge_article.xml",
+          "destination": "data/knowledge_article.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/product_category.xml",
+          "destination": "data/product_category.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/uom_uom.xml",
+          "destination": "data/uom_uom.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/x_nutritional_facts.xml",
+          "destination": "data/x_nutritional_facts.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/product_template.xml",
+          "destination": "data/product_template.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/product_product.xml",
+          "destination": "data/product_product.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/mrp_bom.xml",
+          "destination": "data/mrp_bom.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/mrp_bom_line.xml",
+          "destination": "data/mrp_bom_line.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/mrp_bom_post.xml",
+          "destination": "data/mrp_bom_post.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/mrp_workcenter.xml",
+          "destination": "data/mrp_workcenter.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/mrp_routing_workcenter.xml",
+          "destination": "data/mrp_routing_workcenter.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/quality_point.xml",
+          "destination": "data/quality_point.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/mail_message.xml",
+          "destination": "data/mail_message.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/knowledge_article_favorite.xml",
+          "destination": "data/knowledge_article_favorite.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/sale_order_template.xml",
+          "destination": "data/sale_order_template.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "data/sale_order_template_line.xml",
+          "destination": "data/sale_order_template_line.xml",
+          "section": "data",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/res_company.xml",
+          "destination": "demo/res_company.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/stock_warehouse_orderpoint.xml",
+          "destination": "demo/stock_warehouse_orderpoint.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/stock_lot.xml",
+          "destination": "demo/stock_lot.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/stock_quant.xml",
+          "destination": "demo/stock_quant.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/purchase_order.xml",
+          "destination": "demo/purchase_order.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/purchase_order_line.xml",
+          "destination": "demo/purchase_order_line.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/purchase_order_confirm.xml",
+          "destination": "demo/purchase_order_confirm.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/product_supplierinfo.xml",
+          "destination": "demo/product_supplierinfo.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/mrp_production_schedule.xml",
+          "destination": "demo/mrp_production_schedule.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/mrp_production.xml",
+          "destination": "demo/mrp_production.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/sale_order.xml",
+          "destination": "demo/sale_order.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/sale_order_line.xml",
+          "destination": "demo/sale_order_line.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        },
+        {
+          "source": "demo/sale_order_confirm.xml",
+          "destination": "demo/sale_order_confirm.xml",
+          "section": "demo",
+          "preserve_manifest_position": true
+        }
+      ],
+      "parse_errors": [],
+      "resources_missing": [],
+      "node_counts": {
+        "record": 189,
+        "template": 1,
+        "menuitem": 1,
+        "function": 49
+      },
+      "function_compatibility": [
+        {
+          "file": "data/res_config_settings.xml",
+          "model": "res.config.settings",
+          "method": "execute",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "data/res_config_settings.xml",
+          "model": "ir.actions.server",
+          "method": "run",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "product.template",
+          "method": "button_bom_cost",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "product.template",
+          "method": "button_bom_cost",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "product.template",
+          "method": "button_bom_cost",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "data/mrp_bom_post.xml",
+          "model": "stock.picking.type",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/stock_warehouse_orderpoint.xml",
+          "model": "stock.warehouse.orderpoint",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/stock_warehouse_orderpoint.xml",
+          "model": "stock.warehouse.orderpoint",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/stock_warehouse_orderpoint.xml",
+          "model": "stock.warehouse.orderpoint",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/stock_quant.xml",
+          "model": "stock.quant",
+          "method": "action_apply_inventory",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "purchase.order",
+          "method": "button_confirm",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/purchase_order_confirm.xml",
+          "model": "stock.picking",
+          "method": "button_validate",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "write",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "write",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "set_forecast_qty",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production_schedule.xml",
+          "model": "mrp.production.schedule",
+          "method": "action_replenish",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "quality.check",
+          "method": "do_pass",
+          "model_available": false,
+          "method_available": false
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "button_mark_done",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/mrp_production.xml",
+          "model": "mrp.production",
+          "method": "button_mark_done",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "sale.order",
+          "method": "action_confirm",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "stock.move",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "stock.move.line",
+          "method": "write",
+          "model_available": true,
+          "method_available": true
+        },
+        {
+          "file": "demo/sale_order_confirm.xml",
+          "model": "stock.picking",
+          "method": "button_validate",
+          "model_available": true,
+          "method_available": true
+        }
+      ]
+    }
+  },
+  "tests": [
+    {
+      "name": "original_module_installation_expected_to_be_blocked",
+      "evidence": {
+        "expected_installation_rejection": "You try to install module \"food_distribution\" that depends on module \"appointment_account_payment\".\nBut the latter module is not available in your system."
+      },
+      "status": "passed"
+    },
+    {
+      "name": "relocation_plan_preserves_manifest_order",
+      "evidence": {
+        "manifest_entries_checked": 46,
+        "collisions": 0,
+        "scope": "relocation plan consistency only; no installation/migration performed"
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_sale_and_delivery",
+      "evidence": {
+        "sale_state": "sale",
+        "delivery_states": [
+          "done"
+        ],
+        "quantity_delivered": 2.0
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_purchase_and_receipt",
+      "evidence": {
+        "purchase_state": "purchase",
+        "receipt_states": [
+          "done"
+        ],
+        "quantity_received": 3.0
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_lot_and_expiration",
+      "evidence": {
+        "tracking": "lot",
+        "expiration_date": "2026-10-30 13:50:49.565178",
+        "alert_date": "2026-10-28 13:50:49.565178",
+        "lot_quantity": 4.0
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_manufacturing",
+      "evidence": {
+        "production_state": "done",
+        "quantity_produced": 2.0,
+        "component_moves": [
+          "done"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_invoice_posting",
+      "evidence": {
+        "state": "posted",
+        "amount_total": 24.0,
+        "balanced": true,
+        "uses_synthetic_accounts": true
+      },
+      "status": "passed"
+    },
+    {
+      "name": "demo_user_partner_reference_generated_on_import",
+      "evidence": {
+        "generated_xmlid_verified": "base_industry_data.res_users_7_res_partner",
+        "demo_category_file_loaded": true
+      },
+      "status": "passed"
+    },
+    {
+      "name": "source_inherited_view_xpath_structure",
+      "evidence": {
+        "checked": [
+          {
+            "id": "food_distribution.food_distribution_inherit_product_template_only_form_view",
+            "parent": "product.product_template_only_form_view"
+          },
+          {
+            "id": "food_distribution.food_distribution_inherit_report_lot_label",
+            "parent": "stock.report_lot_label"
+          },
+          {
+            "id": "food_distribution.food_distribution_inherit_report_lot_label_expiry",
+            "parent": "product_expiry.report_lot_label_expiry"
+          },
+          {
+            "id": "food_distribution.res_config_settings_form_view_inherited",
+            "parent": "base.res_config_settings_view_form"
+          }
+        ],
+        "scope": "XPath inheritance structure only; field validation and rendering not covered"
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_food_purchase_to_sale_invoice_same_lot",
+      "evidence": {
+        "purchase": "purchase",
+        "receipt": "done",
+        "same_lot_received_and_delivered": true,
+        "lot_expiration": "2026-11-19 13:50:52.513752",
+        "sale": "sale",
+        "delivery_states": [
+          "done"
+        ],
+        "invoice": "posted",
+        "invoice_untaxed": 24.0,
+        "remaining_stock": 3.0,
+        "uses_synthetic_accounts": true
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_non_admin_business_menu_access",
+      "evidence": {
+        "visible_menu_xmlids": [
+          "sale.sale_menu_root",
+          "purchase.menu_purchase_root",
+          "stock.menu_stock_root",
+          "mrp.menu_mrp_root",
+          "account.menu_finance"
+        ],
+        "scope": "non-admin menu visibility and model read access; no full ACL workflow test"
+      },
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "Food Distribution and Industry Base are not installed in the source database.",
+    "Business smoke tests cover installed Community apps, not absent Enterprise functionality.",
+    "ORM tests run as the shell superuser and do not validate normal-user permissions or browser rendering.",
+    "No migration has been performed; no before/after migration equivalence is established.",
+    "No payments, emails, scheduled jobs or external services are invoked by the test script."
+  ],
+  "filestore_cloned": true,
+  "installed_modules": [
+    "account",
+    "account_add_gln",
+    "account_edi_ubl_cii",
+    "account_payment",
+    "analytic",
+    "api_doc",
+    "auth_passkey",
+    "auth_passkey_portal",
+    "auth_signup",
+    "auth_totp",
+    "auth_totp_mail",
+    "auth_totp_portal",
+    "barcodes",
+    "barcodes_gs1_nomenclature",
+    "base",
+    "base_import",
+    "base_import_module",
+    "base_install_request",
+    "base_setup",
+    "bus",
+    "contacts",
+    "digest",
+    "google_gmail",
+    "html_editor",
+    "http_routing",
+    "iap",
+    "iap_mail",
+    "mail",
+    "mail_bot",
+    "microsoft_outlook",
+    "mrp",
+    "mrp_account",
+    "mrp_product_expiry",
+    "onboarding",
+    "partner_autocomplete",
+    "payment",
+    "phone_validation",
+    "portal",
+    "privacy_lookup",
+    "product",
+    "product_expiry",
+    "purchase",
+    "purchase_edi_ubl_bis3",
+    "purchase_mrp",
+    "purchase_stock",
+    "resource",
+    "resource_mail",
+    "rpc",
+    "sale",
+    "sale_edi_ubl",
+    "sale_management",
+    "sale_mrp",
+    "sale_pdf_quote_builder",
+    "sale_purchase",
+    "sale_purchase_stock",
+    "sale_sms",
+    "sale_stock",
+    "sale_stock_product_expiry",
+    "sales_team",
+    "sms",
+    "snailmail",
+    "snailmail_account",
+    "spreadsheet",
+    "spreadsheet_account",
+    "spreadsheet_dashboard",
+    "spreadsheet_dashboard_account",
+    "spreadsheet_dashboard_sale",
+    "spreadsheet_dashboard_stock_account",
+    "stock",
+    "stock_account",
+    "stock_sms",
+    "uom",
+    "utm",
+    "web",
+    "web_tour",
+    "web_unsplash"
+  ],
+  "source_configuration": {
+    "company_name": "StockPro Demo",
+    "country": "MR",
+    "currency": "USD",
+    "chart_template": "generic_coa",
+    "account_count": 51,
+    "journal_types": {
+      "sale": 1,
+      "purchase": 1,
+      "bank": 1,
+      "general": 4
+    }
+  },
+  "rollback_verification": {
+    "audit_products_remaining": 0,
+    "audit_partners_remaining": 0,
+    "audit_journals_remaining": 0
+  }
+}

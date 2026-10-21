@@ -1,0 +1,36 @@
+name: food-distribution-migration
+services:
+  odoo:
+    image: odoo:19.0
+    restart: "no"
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: ${POSTGRES_PASSWORD:?Use migration/.env}
+    command:
+      - odoo
+      - --database=${MIGRATION_DB:?Use migration/.env}
+      - --db-filter=^${MIGRATION_DB}$
+      - --addons-path=/usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons,/mnt/vendor-addons
+      - --max-cron-threads=0
+    ports:
+      - "127.0.0.1:8074:8069"
+    volumes:
+      - migration-data:/var/lib/odoo
+      - odoo-source-data:/mnt/source-data:ro
+      - ./migration/odoo.conf:/etc/odoo/odoo.conf:ro
+      - ./migration/addons:/mnt/extra-addons
+      - ./migration/vendor:/mnt/vendor-addons:ro
+      - ./food_distribution:/mnt/original-food:ro
+      - ./base_industry_data:/mnt/original-base:ro
+    networks:
+      - source
+volumes:
+  migration-data:
+  odoo-source-data:
+    external: true
+    name: food-distribution_odoo-data
+networks:
+  source:
+    external: true
+    name: food-distribution_default

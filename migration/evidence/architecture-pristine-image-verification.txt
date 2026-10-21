@@ -1,0 +1,3 @@
+??5?????? c /etc/odoo/odoo.conf
+missing     /usr/share/doc/odoo/README.Debian
+missing     /usr/share/doc/odoo/README.md

@@ -1,0 +1,1124 @@
+{
+  "database": "food_distribution_architecture_20261020_152913",
+  "fields": [
+    {
+      "xmlid": "field_product_template_label_note",
+      "model": "product.template",
+      "name": "x_label_note",
+      "type": "text",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9274
+    },
+    {
+      "xmlid": "field_product_template_is_allergen",
+      "model": "product.template",
+      "name": "x_is_allergen",
+      "type": "boolean",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9277
+    },
+    {
+      "xmlid": "field_x_nutritional_facts_name",
+      "model": "x_nutritional_facts",
+      "name": "x_name",
+      "type": "char",
+      "required": true,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": true,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": true,
+      "field_id": 9280
+    },
+    {
+      "xmlid": "field_x_nutritional_facts_active",
+      "model": "x_nutritional_facts",
+      "name": "x_active",
+      "type": "boolean",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": true,
+      "field_id": 9282
+    },
+    {
+      "xmlid": "field_x_nutritional_facts_sequence",
+      "model": "x_nutritional_facts",
+      "name": "x_sequence",
+      "type": "integer",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9284
+    },
+    {
+      "xmlid": "field_x_nutritional_facts_parent",
+      "model": "x_nutritional_facts",
+      "name": "x_parent",
+      "type": "many2one",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "x_nutritional_facts",
+      "inverse_name": null,
+      "ondelete": "set null",
+      "tracking": false,
+      "field_id": 9286
+    },
+    {
+      "xmlid": "field_x_nutritional_facts_unit",
+      "model": "x_nutritional_facts",
+      "name": "x_unit_id",
+      "type": "many2one",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "uom.uom",
+      "inverse_name": null,
+      "ondelete": "set null",
+      "tracking": false,
+      "field_id": 9288
+    },
+    {
+      "xmlid": "field_x_product_template_nutritional_fact_product_template_id",
+      "model": "x_product_template_nutritional_fact",
+      "name": "x_product_template_id",
+      "type": "many2one",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "product.template",
+      "inverse_name": null,
+      "ondelete": "set null",
+      "tracking": false,
+      "field_id": 9290
+    },
+    {
+      "xmlid": "field_x_product_template_nutritional_fact_nutritional_fact_id",
+      "model": "x_product_template_nutritional_fact",
+      "name": "x_nutritional_fact_id",
+      "type": "many2one",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "x_nutritional_facts",
+      "inverse_name": null,
+      "ondelete": "set null",
+      "tracking": false,
+      "field_id": 9292
+    },
+    {
+      "xmlid": "field_x_product_template_nutritional_fact_per_100g",
+      "model": "x_product_template_nutritional_fact",
+      "name": "x_per_100g",
+      "type": "float",
+      "required": true,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9294
+    },
+    {
+      "xmlid": "field_x_product_template_nutritional_fact_unit",
+      "model": "x_product_template_nutritional_fact",
+      "name": "x_unit_id",
+      "type": "many2one",
+      "required": false,
+      "readonly": true,
+      "copy": false,
+      "store": false,
+      "translate": false,
+      "related": [
+        "x",
+        "_",
+        "n",
+        "u",
+        "t",
+        "r",
+        "i",
+        "t",
+        "i",
+        "o",
+        "n",
+        "a",
+        "l",
+        "_",
+        "f",
+        "a",
+        "c",
+        "t",
+        "_",
+        "i",
+        "d",
+        ".",
+        "x",
+        "_",
+        "u",
+        "n",
+        "i",
+        "t",
+        "_",
+        "i",
+        "d"
+      ],
+      "comodel": "uom.uom",
+      "inverse_name": null,
+      "ondelete": "set null",
+      "tracking": false,
+      "field_id": 9296
+    },
+    {
+      "xmlid": "field_x_product_template_nutritional_fact_sequence",
+      "model": "x_product_template_nutritional_fact",
+      "name": "x_sequence",
+      "type": "integer",
+      "required": false,
+      "readonly": false,
+      "copy": false,
+      "store": false,
+      "translate": false,
+      "related": [
+        "x",
+        "_",
+        "n",
+        "u",
+        "t",
+        "r",
+        "i",
+        "t",
+        "i",
+        "o",
+        "n",
+        "a",
+        "l",
+        "_",
+        "f",
+        "a",
+        "c",
+        "t",
+        "_",
+        "i",
+        "d",
+        ".",
+        "x",
+        "_",
+        "s",
+        "e",
+        "q",
+        "u",
+        "e",
+        "n",
+        "c",
+        "e"
+      ],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9298
+    },
+    {
+      "xmlid": "field_x_product_template_ingredients_product_template_id",
+      "model": "x_product_template_ingredients",
+      "name": "x_product_template_id",
+      "type": "many2one",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "product.template",
+      "inverse_name": null,
+      "ondelete": "set null",
+      "tracking": false,
+      "field_id": 9300
+    },
+    {
+      "xmlid": "field_x_product_template_ingredients_ingredient_id",
+      "model": "x_product_template_ingredients",
+      "name": "x_ingredient_id",
+      "type": "many2one",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "product.template",
+      "inverse_name": null,
+      "ondelete": "set null",
+      "tracking": false,
+      "field_id": 9302
+    },
+    {
+      "xmlid": "field_x_product_template_ingredients_is_allergen",
+      "model": "x_product_template_ingredients",
+      "name": "x_is_allergen",
+      "type": "boolean",
+      "required": false,
+      "readonly": true,
+      "copy": false,
+      "store": false,
+      "translate": false,
+      "related": [
+        "x",
+        "_",
+        "i",
+        "n",
+        "g",
+        "r",
+        "e",
+        "d",
+        "i",
+        "e",
+        "n",
+        "t",
+        "_",
+        "i",
+        "d",
+        ".",
+        "x",
+        "_",
+        "i",
+        "s",
+        "_",
+        "a",
+        "l",
+        "l",
+        "e",
+        "r",
+        "g",
+        "e",
+        "n"
+      ],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9304
+    },
+    {
+      "xmlid": "field_x_product_template_ingredients_sequence",
+      "model": "x_product_template_ingredients",
+      "name": "x_sequence",
+      "type": "integer",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9306
+    },
+    {
+      "xmlid": "field_x_product_template_ingredients_share",
+      "model": "x_product_template_ingredients",
+      "name": "x_share",
+      "type": "integer",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9308
+    },
+    {
+      "xmlid": "field_product_template_nutritional_facts",
+      "model": "product.template",
+      "name": "x_nutritional_fact_ids",
+      "type": "one2many",
+      "required": false,
+      "readonly": false,
+      "copy": false,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "x_product_template_nutritional_fact",
+      "inverse_name": "x_product_template_id",
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9310
+    },
+    {
+      "xmlid": "field_product_template_ingredients",
+      "model": "product.template",
+      "name": "x_ingredient_ids",
+      "type": "one2many",
+      "required": false,
+      "readonly": false,
+      "copy": false,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": "x_product_template_ingredients",
+      "inverse_name": "x_product_template_id",
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9313
+    },
+    {
+      "xmlid": "field_res_company_x_module_food_drinks_labels",
+      "model": "res.company",
+      "name": "x_module_food_drinks_labels",
+      "type": "boolean",
+      "required": false,
+      "readonly": false,
+      "copy": true,
+      "store": true,
+      "translate": false,
+      "related": [],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9316
+    },
+    {
+      "xmlid": "field_res_config_setting_x_module_food_drinks_labels",
+      "model": "res.config.settings",
+      "name": "x_module_food_drinks_labels",
+      "type": "boolean",
+      "required": false,
+      "readonly": false,
+      "copy": false,
+      "store": true,
+      "translate": false,
+      "related": [
+        "c",
+        "o",
+        "m",
+        "p",
+        "a",
+        "n",
+        "y",
+        "_",
+        "i",
+        "d",
+        ".",
+        "x",
+        "_",
+        "m",
+        "o",
+        "d",
+        "u",
+        "l",
+        "e",
+        "_",
+        "f",
+        "o",
+        "o",
+        "d",
+        "_",
+        "d",
+        "r",
+        "i",
+        "n",
+        "k",
+        "s",
+        "_",
+        "l",
+        "a",
+        "b",
+        "e",
+        "l",
+        "s"
+      ],
+      "comodel": null,
+      "inverse_name": null,
+      "ondelete": null,
+      "tracking": false,
+      "field_id": 9318
+    }
+  ],
+  "models": {
+    "x_nutritional_facts": {
+      "table": "x_nutritional_facts",
+      "rec_name": "x_name",
+      "order": "id",
+      "state": "manual"
+    },
+    "x_product_template_ingredients": {
+      "table": "x_product_template_ingredients",
+      "rec_name": null,
+      "order": "id",
+      "state": "manual"
+    },
+    "x_product_template_nutritional_fact": {
+      "table": "x_product_template_nutritional_fact",
+      "rec_name": null,
+      "order": "id",
+      "state": "manual"
+    }
+  },
+  "fixture": {
+    "food_id": 2,
+    "template_id": 2,
+    "ingredient_id": 1,
+    "fact_id": 1,
+    "lot_id": 1,
+    "sale_id": 1,
+    "ingredient_line_ids": [
+      1
+    ],
+    "nutrition_line_ids": [
+      1
+    ]
+  },
+  "legacy_duplication": {
+    "ingredients": 0,
+    "nutrition": 0
+  },
+  "all_model_fields": {
+    "x_nutritional_facts": {
+      "id": {
+        "type": "integer",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "display_name": {
+        "type": "char",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": true
+      },
+      "activity_state": {
+        "type": "selection",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "activity_user_id": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "activity_type_id": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": false
+      },
+      "activity_type_icon": {
+        "type": "char",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "activity_date_deadline": {
+        "type": "date",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "my_activity_date_deadline": {
+        "type": "date",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "activity_summary": {
+        "type": "char",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": false
+      },
+      "activity_exception_decoration": {
+        "type": "selection",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "activity_exception_icon": {
+        "type": "char",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": false
+      },
+      "message_ids": {
+        "type": "one2many",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": true
+      },
+      "has_message": {
+        "type": "boolean",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "create_uid": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "write_date": {
+        "type": "datetime",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "x_name": {
+        "type": "char",
+        "manual": true,
+        "required": true,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_active": {
+        "type": "boolean",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_sequence": {
+        "type": "integer",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_parent": {
+        "type": "many2one",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_unit_id": {
+        "type": "many2one",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      }
+    },
+    "x_product_template_ingredients": {
+      "id": {
+        "type": "integer",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "display_name": {
+        "type": "char",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "create_uid": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "write_date": {
+        "type": "datetime",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "x_product_template_id": {
+        "type": "many2one",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_ingredient_id": {
+        "type": "many2one",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_is_allergen": {
+        "type": "boolean",
+        "manual": true,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "x_sequence": {
+        "type": "integer",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_share": {
+        "type": "integer",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      }
+    },
+    "x_product_template_nutritional_fact": {
+      "id": {
+        "type": "integer",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "display_name": {
+        "type": "char",
+        "manual": false,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "create_uid": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "write_date": {
+        "type": "datetime",
+        "manual": false,
+        "required": false,
+        "copy": true,
+        "readonly": true,
+        "store": true
+      },
+      "x_product_template_id": {
+        "type": "many2one",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_nutritional_fact_id": {
+        "type": "many2one",
+        "manual": true,
+        "required": false,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_per_100g": {
+        "type": "float",
+        "manual": true,
+        "required": true,
+        "copy": true,
+        "readonly": false,
+        "store": true
+      },
+      "x_unit_id": {
+        "type": "many2one",
+        "manual": true,
+        "required": false,
+        "copy": false,
+        "readonly": true,
+        "store": false
+      },
+      "x_sequence": {
+        "type": "integer",
+        "manual": true,
+        "required": false,
+        "copy": false,
+        "readonly": false,
+        "store": false
+      }
+    }
+  },
+  "snapshot": {
+    "product.template": {
+      "ids": [
+        2,
+        1
+      ],
+      "columns": [
+        "name",
+        "x_label_note",
+        "x_is_allergen"
+      ],
+      "rows": [
+        {
+          "id": 2,
+          "name": "ARCHITECTURE Legacy Food",
+          "x_label_note": "Legacy storage instructions",
+          "x_is_allergen": false
+        },
+        {
+          "id": 1,
+          "name": "ARCHITECTURE Legacy Ingredient",
+          "x_label_note": false,
+          "x_is_allergen": true
+        }
+      ]
+    },
+    "x_nutritional_facts": {
+      "ids": [
+        1
+      ],
+      "columns": [
+        "x_name",
+        "x_active",
+        "x_sequence",
+        "x_unit_id"
+      ],
+      "rows": [
+        {
+          "id": 1,
+          "x_name": "ARCHITECTURE Legacy Fact",
+          "x_active": true,
+          "x_sequence": 17,
+          "x_unit_id": [
+            15,
+            "g"
+          ]
+        }
+      ]
+    },
+    "x_product_template_ingredients": {
+      "ids": [
+        1
+      ],
+      "columns": [
+        "x_product_template_id",
+        "x_ingredient_id",
+        "x_share"
+      ],
+      "rows": [
+        {
+          "id": 1,
+          "x_product_template_id": [
+            2,
+            "ARCHITECTURE Legacy Food"
+          ],
+          "x_ingredient_id": [
+            1,
+            "ARCHITECTURE Legacy Ingredient"
+          ],
+          "x_share": 7
+        }
+      ]
+    },
+    "x_product_template_nutritional_fact": {
+      "ids": [
+        1
+      ],
+      "columns": [
+        "x_product_template_id",
+        "x_nutritional_fact_id",
+        "x_per_100g"
+      ],
+      "rows": [
+        {
+          "id": 1,
+          "x_product_template_id": [
+            2,
+            "ARCHITECTURE Legacy Food"
+          ],
+          "x_nutritional_fact_id": [
+            1,
+            "ARCHITECTURE Legacy Fact"
+          ],
+          "x_per_100g": 12.5
+        }
+      ]
+    },
+    "stock.lot": {
+      "ids": [
+        1
+      ],
+      "columns": [
+        "name",
+        "product_id",
+        "expiration_date"
+      ],
+      "rows": [
+        {
+          "id": 1,
+          "name": "ARCHITECTURE-LEGACY-LOT",
+          "product_id": [
+            2,
+            "ARCHITECTURE Legacy Food"
+          ],
+          "expiration_date": "2026-11-19 19:21:40.463483"
+        }
+      ]
+    },
+    "sale.order": {
+      "ids": [
+        1
+      ],
+      "columns": [
+        "name",
+        "partner_id",
+        "state",
+        "amount_total"
+      ],
+      "rows": [
+        {
+          "id": 1,
+          "name": "S00001",
+          "partner_id": [
+            6,
+            "ARCHITECTURE Legacy Customer"
+          ],
+          "state": "draft",
+          "amount_total": 27.6
+        }
+      ]
+    }
+  }
+}

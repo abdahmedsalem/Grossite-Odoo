@@ -1,0 +1,89 @@
+{
+  "tests": [
+    {
+      "name": "community_sale_and_delivery",
+      "evidence": {
+        "sale_state": "sale",
+        "delivery_states": [
+          "done"
+        ],
+        "quantity_delivered": 2.0
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_purchase_and_receipt",
+      "evidence": {
+        "purchase_state": "purchase",
+        "receipt_states": [
+          "done"
+        ],
+        "quantity_received": 3.0
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_lot_and_expiration",
+      "evidence": {
+        "tracking": "lot",
+        "expiration_date": "2026-10-30 14:44:50.202850",
+        "alert_date": "2026-10-28 14:44:50.202850",
+        "lot_quantity": 4.0
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_manufacturing",
+      "evidence": {
+        "production_state": "done",
+        "quantity_produced": 2.0,
+        "component_moves": [
+          "done"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_invoice_posting",
+      "evidence": {
+        "state": "posted",
+        "amount_total": 24.0,
+        "balanced": true,
+        "uses_synthetic_accounts": true
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_food_purchase_to_sale_invoice_same_lot",
+      "evidence": {
+        "purchase": "purchase",
+        "receipt": "done",
+        "same_lot_received_and_delivered": true,
+        "lot_expiration": "2026-11-19 14:44:52.816450",
+        "sale": "sale",
+        "delivery_states": [
+          "done"
+        ],
+        "invoice": "posted",
+        "invoice_untaxed": 24.0,
+        "remaining_stock": 3.0,
+        "uses_synthetic_accounts": true
+      },
+      "status": "passed"
+    },
+    {
+      "name": "community_non_admin_business_menu_access",
+      "evidence": {
+        "visible_menu_xmlids": [
+          "sale.sale_menu_root",
+          "purchase.menu_purchase_root",
+          "stock.menu_stock_root",
+          "mrp.menu_mrp_root",
+          "account.menu_finance"
+        ],
+        "scope": "non-admin menu visibility and model read access; no full ACL workflow test"
+      },
+      "status": "passed"
+    }
+  ]
+}

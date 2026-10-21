@@ -1,0 +1,10 @@
+.env
+docker/odoo.conf
+enterprise/*
+!enterprise/.gitkeep
+__pycache__/
+*.pyc
+backups/
+migration/.env
+migration/odoo.conf
+migration/browser-profile/

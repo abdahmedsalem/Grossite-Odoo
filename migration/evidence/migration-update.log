@@ -1,0 +1,74 @@
+2026-10-20 14:43:13,909 257 WARNING ? odoo.tools.config: option addons_path, no such directory '/mnt/enterprise-addons', skipped 
+2026-10-20 14:43:13,909 257 WARNING ? odoo.tools.config: option addons_path, no such directory '/mnt/enterprise-addons', skipped 
+2026-10-20 14:43:13,910 257 INFO ? odoo: Odoo version 19.0-20260609 
+2026-10-20 14:43:13,912 257 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-10-20 14:43:13,912 257 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/mnt/vendor-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-10-20 14:43:13,913 257 INFO ? odoo: database: odoo@db:5432 
+2026-10-20 14:43:14,585 257 INFO ? odoo.service.server: HTTP service (werkzeug) running on a851845c810f:8070 
+2026-10-20 14:43:14,649 257 INFO food_distribution_migration_20261020_140639 odoo.tests.common: Importing test framework 
+2026-10-20 14:43:14,715 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading 1 modules... 
+2026-10-20 14:43:14,722 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-10-20 14:43:14,778 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: updating modules list 
+2026-10-20 14:43:14,783 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-10-20 14:43:19,074 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Food Distribution Community', 'Industry Base Community', 'Food Production Forecasts', 'Food Distribution Quality'] to user __system__ #1 via n/a 
+2026-10-20 14:43:19,074 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Food Distribution Community', 'Industry Base Community', 'Food Production Forecasts', 'Food Distribution Quality'] to user __system__ #1 via n/a 
+2026-10-20 14:43:22,859 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-10-20 14:43:22,974 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading 99 modules... 
+2026-10-20 14:43:23,195 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Loading module base_industry_data (19/99) 
+2026-10-20 14:43:23,301 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading base_industry_data/data/res_partner_category.xml 
+2026-10-20 14:43:23,422 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Module base_industry_data loaded in 0.23s, 38 queries (+38 other) 
+2026-10-20 14:43:25,229 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Loading module food_distribution (97/99) 
+2026-10-20 14:43:25,876 257 INFO food_distribution_migration_20261020_140639 odoo.registry: module food_distribution: creating or updating database tables 
+2026-10-20 14:43:26,159 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/security/ir.model.access.csv 
+2026-10-20 14:43:26,203 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/data/ir_default.xml 
+2026-10-20 14:43:26,218 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/views/nutritional_facts_views.xml 
+2026-10-20 14:43:26,557 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/views/nutritional_facts_actions.xml 
+2026-10-20 14:43:26,569 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/views/nutritional_facts_menus.xml 
+2026-10-20 14:43:26,581 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/report/lot_label_templates.xml 
+2026-10-20 14:43:26,619 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/report/paperformat.xml 
+2026-10-20 14:43:26,642 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/views/res_config_settings_views.xml 
+2026-10-20 14:43:26,851 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/data/uom_uom.xml 
+2026-10-20 14:43:26,876 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution/data/x_nutritional_facts.xml 
+2026-10-20 14:43:27,398 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Module food_distribution loaded in 2.17s, 414 queries (+414 other) 
+2026-10-20 14:43:27,398 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Loading module food_distribution_planning (98/99) 
+2026-10-20 14:43:27,798 257 INFO food_distribution_migration_20261020_140639 odoo.registry: module food_distribution_planning: creating or updating database tables 
+2026-10-20 14:43:28,001 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution_planning/security/security.xml 
+2026-10-20 14:43:28,016 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution_planning/security/ir.model.access.csv 
+2026-10-20 14:43:28,029 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution_planning/views/forecast_views.xml 
+2026-10-20 14:43:28,273 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Module food_distribution_planning loaded in 0.87s, 110 queries (+110 other) 
+2026-10-20 14:43:28,273 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Loading module food_distribution_quality (99/99) 
+2026-10-20 14:43:28,402 257 INFO food_distribution_migration_20261020_140639 odoo.registry: module food_distribution_quality: creating or updating database tables 
+2026-10-20 14:43:28,591 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution_quality/security/security.xml 
+2026-10-20 14:43:28,717 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution_quality/security/ir.model.access.csv 
+2026-10-20 14:43:28,730 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: loading food_distribution_quality/views/quality_views.xml 
+2026-10-20 14:43:29,111 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Module food_distribution_quality loaded in 0.84s, 235 queries (+235 other) 
+2026-10-20 14:43:29,112 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: 99 modules loaded in 6.14s, 797 queries (+797 extra) 
+2026-10-20 14:43:31,886 257 INFO food_distribution_migration_20261020_140639 odoo.modules.loading: Modules loaded. 
+2026-10-20 14:43:31,932 257 INFO food_distribution_migration_20261020_140639 odoo.registry: Registry changed, signaling through the database 
+2026-10-20 14:43:31,937 257 INFO food_distribution_migration_20261020_140639 odoo.registry: Registry loaded in 17.329s 
+2026-10-20 14:43:31,937 257 INFO food_distribution_migration_20261020_140639 odoo.service.server: Starting post tests 
+2026-10-20 14:43:31,959 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution.tests.test_food_distribution: Starting TestFoodDistribution.test_bom_label_uses_food_data_without_creating_lot ... 
+2026-10-20 14:43:32,492 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution.tests.test_food_distribution: Starting TestFoodDistribution.test_company_setting_does_not_mutate_global_report ... 
+2026-10-20 14:43:33,760 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution.tests.test_food_distribution: Starting TestFoodDistribution.test_internal_user_rights ... 
+2026-10-20 14:43:34,120 257 INFO food_distribution_migration_20261020_140639 odoo.models.unlink: User #7 deleted mail.message records with IDs: [211] 
+2026-10-20 14:43:34,123 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: unlink, uid: 7, model: x_nutritional_facts 
+2026-10-20 14:43:34,127 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution.tests.test_food_distribution: Starting TestFoodDistribution.test_legacy_xmlids_and_field_types ... 
+2026-10-20 14:43:34,130 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution.tests.test_food_distribution: Starting TestFoodDistribution.test_related_fields_and_archiving ... 
+2026-10-20 14:43:34,310 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_attachment: filestore gc 11 checked, 6 removed 
+2026-10-20 14:43:34,312 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution_planning.tests.test_forecast: Starting TestFoodForecast.test_invalid_quantity_and_dates ... 
+2026-10-20 14:43:34,424 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution_planning.tests.test_forecast: Starting TestFoodForecast.test_mismatched_bom_rejected ... 
+2026-10-20 14:43:34,553 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution_planning.tests.test_forecast: Starting TestFoodForecast.test_native_manufacturing_and_no_duplicate ... 
+2026-10-20 14:43:34,804 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-10-20 14:43:34,806 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution_quality.tests.test_quality: Starting TestFoodQuality.test_failed_measurement_blocks_completion ... 
+2026-10-20 14:43:35,117 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution_quality.tests.test_quality: Starting TestFoodQuality.test_generation_idempotent_and_blocking ... 
+2026-10-20 14:43:35,508 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution_quality.tests.test_quality: Starting TestFoodQuality.test_ordinary_mrp_without_points_unchanged ... 
+2026-10-20 14:43:35,798 257 INFO food_distribution_migration_20261020_140639 odoo.addons.food_distribution_quality.tests.test_quality: Starting TestFoodQuality.test_other_company_point_not_used ... 
+2026-10-20 14:43:36,915 257 INFO food_distribution_migration_20261020_140639 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-10-20 14:43:36,916 257 INFO food_distribution_migration_20261020_140639 odoo.service.server: 12 post-tests in 4.98s, 2539 queries 
+2026-10-20 14:43:36,916 257 INFO food_distribution_migration_20261020_140639 odoo.tests.stats: food_distribution: 7 tests 2.35s 1038 queries 
+2026-10-20 14:43:36,916 257 INFO food_distribution_migration_20261020_140639 odoo.tests.stats: food_distribution_planning: 5 tests 0.49s 277 queries 
+2026-10-20 14:43:36,916 257 INFO food_distribution_migration_20261020_140639 odoo.tests.stats: food_distribution_quality: 6 tests 2.11s 1224 queries 
+2026-10-20 14:43:36,917 257 INFO food_distribution_migration_20261020_140639 odoo.tests.result: 0 failed, 0 error(s) of 12 tests when loading database 'food_distribution_migration_20261020_140639' 
+2026-10-20 14:43:36,917 257 INFO food_distribution_migration_20261020_140639 odoo.service.server: Initiating shutdown 
+2026-10-20 14:43:36,917 257 INFO food_distribution_migration_20261020_140639 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-10-20 14:43:37,169 257 INFO food_distribution_migration_20261020_140639 odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  

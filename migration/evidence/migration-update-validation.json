@@ -1,0 +1,22 @@
+[
+  {
+    "model": "product.template",
+    "rows": 2,
+    "preserved": true
+  },
+  {
+    "model": "x_nutritional_facts",
+    "rows": 1,
+    "preserved": true
+  },
+  {
+    "model": "x_product_template_ingredients",
+    "rows": 1,
+    "preserved": true
+  },
+  {
+    "model": "x_product_template_nutritional_fact",
+    "rows": 1,
+    "preserved": true
+  }
+]

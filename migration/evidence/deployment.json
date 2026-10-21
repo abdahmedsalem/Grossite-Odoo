@@ -1,0 +1,16 @@
+﻿{
+    "preserved_original_business_rows":  36,
+    "live_read_only_browser_checks":  9,
+    "backup":  "C:\\Users\\x1\\Downloads\\food_distribution-19.0.1.1\\backups\\pre-community-20261020-145921",
+    "preview_browser_checks":  12,
+    "business_tables_checked":  15,
+    "url":  "http://localhost:8073",
+    "database":  "food_distribution",
+    "gaps_document":  "docs/MIGRATION_COMMUNITY.md",
+    "status":  "deployed",
+    "enterprise_parity_complete":  false,
+    "native_regression_tests":  7,
+    "original_xml_files_unchanged":  46,
+    "date":  "2026-10-20",
+    "odoo_acceptance_tests":  16
+}
