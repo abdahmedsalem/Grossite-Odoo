@@ -1,1 +1,0 @@
-<odoo><record id="forecast_company_rule" model="ir.rule"><field name="name">Food forecast companies</field><field name="model_id" ref="model_food_production_forecast"/><field name="domain_force">[('company_id', 'in', company_ids)]</field></record></odoo>

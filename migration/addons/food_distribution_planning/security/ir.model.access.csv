@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-food_forecast_user,Food forecasts read,model_food_production_forecast,mrp.group_mrp_user,1,0,0,0
-food_forecast_manager,Food forecasts manage,model_food_production_forecast,mrp.group_mrp_manager,1,1,1,1
