@@ -1,0 +1,221 @@
+ROADMAP COMPLET - PROJET ODOO 19 COMMUNITY ALIMENTAIRE
+======================================================
+
+OBJECTIF
+--------
+Construire en sept jours une première version complète, démontrable et testée
+d'un système Odoo Community pour une entreprise de distribution et de
+production alimentaire. Ce plan couvre le fonctionnel, le technique, les
+tests, la documentation et la préparation production.
+
+Important : sept jours permettent un MVP complet si le périmètre est maîtrisé.
+Une vraie production exige ensuite validation utilisateurs, données réelles,
+comptabilité locale, sécurité réseau, sauvegardes et support.
+
+ARCHITECTURE CIBLE
+------------------
+addons/base_industry_data/
+addons/food_distribution/
+addons/food_distribution_planning/
+addons/food_distribution_quality/
+vendor/quality_control_oca/
+docker/odoo.conf
+compose.yaml
+docs/
+
+PRINCIPES
+---------
+1. Vérifier Odoo standard avant de coder.
+2. Ne jamais modifier le code interne Odoo.
+3. Etendre les modèles avec _inherit.
+4. Mettre le code spécifique dans addons/.
+5. Garder les modules OCA externes non modifiés dans vendor/.
+6. Travailler avec Git et des copies de base.
+7. Tester chaque fonctionnalité avant la suivante.
+
+JOUR 1 - ANALYSE ET ENVIRONNEMENT
+---------------------------------
+MATIN - Métier
+- Identifier les sociétés, sites et utilisateurs.
+- Interviewer direction, achats, magasin, production, qualité, ventes et comptabilité.
+- Décrire achat, réception, contrôle, stock, fabrication, étiquetage, vente,
+  livraison et facturation.
+- Lister les documents actuels et les règles obligatoires.
+- Identifier produits, ingrédients, allergènes, lots et recettes.
+- Noter devise MRU, fiscalité, langues française/arabe et besoins locaux.
+
+APRÈS-MIDI - Technique
+- Installer Git, Docker Desktop et VS Code.
+- Créer le dépôt et les dossiers addons, vendor, docker et docs.
+- Créer compose.yaml avec Odoo 19 et PostgreSQL.
+- Créer .env.example sans secret réel.
+- Démarrer avec docker compose up -d.
+- Vérifier docker compose ps, les logs et l'accès navigateur.
+
+LIVRABLES
+- Cahier des charges initial.
+- Diagramme du processus.
+- Tableau Fit/Gap.
+- Odoo et PostgreSQL fonctionnels.
+- Premier commit Git.
+
+JOUR 2 - CONFIGURATION ODOO STANDARD
+-------------------------------------
+Installer ou activer : product, stock, purchase, sale_management, mrp,
+product_expiry, account et le module qualité Community/OCA.
+
+Configurer :
+- société, adresse, devise, langues et taxes ;
+- journaux comptables ;
+- entrepôts, emplacements et routes ;
+- unités de mesure et catégories ;
+- clients, fournisseurs et produits ;
+- utilisateurs, groupes et séquences ;
+- nomenclatures, postes et opérations.
+
+Vérifier sans code : commande achat, réception, mouvement de stock, commande
+client, livraison, facture et ordre de fabrication.
+
+LIVRABLE : flux Odoo standard achat-stock-MRP-vente fonctionnel.
+
+JOUR 3 - MODULE ALIMENTAIRE
+---------------------------
+Créer addons/food_distribution avec __manifest__.py, models, views, security,
+data, report, demo et tests.
+
+Créer les modèles :
+- food.ingredient ;
+- food.allergen ;
+- food.nutritional.fact ;
+- food.product.ingredient ;
+- food.product.nutrition.
+
+Etendre product.template avec note d'étiquette, allergènes, ingrédients et
+valeurs nutritionnelles. Créer relations, archivage, séquences et contraintes.
+
+Créer menus, actions, listes, formulaires, recherches et droits d'accès.
+
+LIVRABLE : produit alimentaire complet et utilisable dans Odoo.
+
+JOUR 4 - STOCK, FABRICATION ET QUALITÉ
+--------------------------------------
+STOCK ET MRP
+- Configurer lots et dates d'expiration.
+- Créer nomenclatures, postes et opérations.
+- Associer composants et produits finis.
+- Vérifier consommation, production et traçabilité par lot.
+
+QUALITÉ
+- Installer vendor/quality_control_oca et vérifier sa provenance/licence.
+- Créer points de contrôle quantitatifs et qualitatifs.
+- Lier contrôles aux réceptions et fabrications.
+- Enregistrer inspections et résultats.
+- Bloquer ou libérer les produits selon le résultat.
+- Ajouter uniquement les règles alimentaires absentes du module OCA.
+
+PARCOURS À RÉUSSIR
+Achat de matière, réception, contrôle, mise en stock, fabrication, contrôle
+final et création du lot produit fini.
+
+LIVRABLE : stock, fabrication et qualité fonctionnels.
+
+JOUR 5 - RAPPORTS ET PRÉVISIONS
+-------------------------------
+Créer des rapports QWeb : étiquette produit, étiquette lot, fiche nutrition,
+fiche fabrication et rapport qualité.
+
+Créer food_distribution_planning avec produit, quantité, date, nomenclature,
+société, états brouillon/confirmé/généré et bouton de génération d'un OF natif.
+
+Ajouter contraintes de quantité et de date et empêcher les doublons.
+
+Vérifier que les rapports affichent les bonnes données et sont imprimables.
+
+LIVRABLE : prévision vers OF, contrôle et étiquetage fonctionnels.
+
+JOUR 6 - TESTS ET VALIDATION
+-----------------------------
+TESTS AUTOMATISÉS
+- installation sur base vierge ;
+- mise à jour de module ;
+- produits, ingrédients, allergènes et nutrition ;
+- archivage et contraintes ;
+- droits et multi-société ;
+- fabrication, qualité réussie et qualité échouée ;
+- prévisions, rapports et absence de doublons.
+
+TESTS NAVIGATEUR
+1. Se connecter comme administrateur.
+2. Créer produit, ingrédient et allergène.
+3. Ajouter nutrition et nomenclature.
+4. Créer un OF et une inspection.
+5. Refuser un produit non conforme.
+6. Valider un produit conforme.
+7. Imprimer l'étiquette.
+8. Vendre, livrer et facturer.
+
+SÉCURITÉ
+- Tester chaque groupe avec un compte séparé.
+- Vérifier accès, suppression et règles de société.
+- Vérifier qu'aucun secret n'est dans Git.
+
+LIVRABLES : rapport de tests, anomalies corrigées et validation utilisateur.
+
+JOUR 7 - DONNÉES, PRODUCTION ET LIVRAISON
+------------------------------------------
+DONNÉES
+- Préparer les fichiers d'import.
+- Tester les imports sur une copie.
+- Importer partenaires, produits, fournisseurs et stocks.
+- Vérifier lots, recettes et nomenclatures.
+- Comparer les totaux avant/après.
+
+SAUVEGARDE ET MIGRATION
+- Sauvegarder PostgreSQL, filestore et configuration.
+- Restaurer sur une base isolée.
+- Comparer les données restaurées.
+- Conserver date, contenu et emplacement des sauvegardes.
+
+PRODUCTION
+- Utiliser des secrets propres à la production.
+- Ne pas exposer PostgreSQL sur Internet.
+- Placer Odoo derrière HTTPS et reverse proxy.
+- Configurer domaine, supervision, logs et sauvegardes automatiques.
+- Tester une restauration.
+- Créer les vrais utilisateurs et désactiver les comptes de test.
+
+LIVRAISON GIT
+- Vérifier git status et l'absence de .env.
+- Vérifier README, licences et dépendances.
+- Créer un tag de version.
+- Pousser le commit et noter son hash.
+
+CRITÈRES D'ACCEPTATION
+-----------------------
+- Conteneurs Odoo/PostgreSQL sains.
+- Installation et mise à jour réussies sur copie.
+- Tests automatisés sans erreur.
+- Parcours métier validés par les utilisateurs.
+- Droits et multi-société vérifiés.
+- Rapports imprimables.
+- Sauvegarde et restauration testées.
+- Aucune donnée de test dans la production.
+- Aucun secret dans Git.
+- Ecarts Enterprise documentés.
+
+COMMANDES ESSENTIELLES
+----------------------
+docker compose up -d
+docker compose ps
+docker compose logs --tail=200 odoo
+docker compose exec odoo odoo --database=food_distribution --update=food_distribution --stop-after-init
+git status
+git add .
+git commit -m "feature: description"
+git push
+
+APRÈS LES SEPT JOURS
+--------------------
+Prévoir une phase de stabilisation pour comptabilité et taxes mauritaniennes,
+traduction arabe, imports réels, formation, HTTPS, supervision, restauration
+planifiée et support utilisateur.
